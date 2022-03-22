@@ -1,6 +1,6 @@
 {
   "name": "@symmetric-v2/frontend",
-  "version": "1.36.2",
+  "version": "1.37.1",
   "engines": {
     "node": "14.x",
     "npm": ">=7"
