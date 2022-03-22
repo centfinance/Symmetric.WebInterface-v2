@@ -36,7 +36,7 @@ export default function initSentry(app: App) {
 
     init({
       dsn:
-        'https://d292b6ec7b6e4aa2801d972e06cb232c@o574636.ingest.sentry.io/5725878',
+        'https://83a8ae1e00b841e8a46ba0a61c2f19f8@o1174197.ingest.sentry.io/6270006',
       integrations: [new Integrations.BrowserTracing()],
       tracesSampleRate: 1.0,
       environment,

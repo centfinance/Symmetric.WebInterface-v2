@@ -2,64 +2,56 @@
   <div>
     <h3 class="mb-4">{{ $t('featuredProtocol') }}</h3>
     <div class="grid grid-cols-12 gap-4">
-      <div class="col-span-12 lg:col-span-6">
+      <div class="col-span-12 lg:col-span-4">
         <BalCard
-          title="Element Finance"
-          imgSrc="/images/banners/element.jpg"
+          title="What’s coming with Symmetric v2?"
+          imgSrc="https://miro.medium.com/max/1200/0*IB8Epue3yfd3NHMq.jpeg"
           class="transition-shadow hover:shadow-xl"
           hFull
           growContent
         >
           <p>
-            {{ $t('aboutElementFinance') }}
+            {{ $t('cardOneText') }}
           </p>
           <template v-slot:footer>
             <BalLink :href="EXTERNAL_LINKS.Element.Earn" external>
-              <span>{{ $t('viewAndManangeOnElement') }}</span>
+              <span>{{ $t('viewAndReadMoreCard1') }}</span>
               <BalIcon name="arrow-up-right" size="sm" class="ml-1" />
             </BalLink>
           </template>
         </BalCard>
       </div>
-      <div class="col-span-12 md:col-span-6 lg:col-span-3">
+      <div class="col-span-12 md:col-span-6 lg:col-span-4">
         <BalCard
-          title="LUSD"
-          imgSrc="/images/banners/element-lusd.svg"
+          title="Symmetric-PrimeDAO Partnership"
+          imgSrc="https://miro.medium.com/max/1400/0*GKnpKS01rfdrqoi8"
           class="transition-shadow hover:shadow-xl"
           hFull
           growContent
         >
-          <h6>LUSD3CRV-f—ePyvCurveLUSD</h6>
-          <p>
-            Element principal pool Yearn crvLUSD v2 vault.
-          </p>
+          <span>
+            Symmetric and PrimeDAO areannounced a partnership between the two DAOs that will align our interests, bring a fair and efficient token launchpad to Celo and Gnosis.
+          </span>
           <template v-slot:footer>
-            <BalLink :href="EXTERNAL_LINKS.Element.Pools.LUSD" external>
-              <span>{{ $t('viewOnElement') }}</span>
+            <BalLink :href="EXTERNAL_LINKS.Symmetric.PrimeDaoMedium" external>
+              <span>{{ $t('viewAndReadMoreCard2') }}</span>
               <BalIcon name="arrow-up-right" size="sm" class="ml-1" />
             </BalLink>
           </template>
         </BalCard>
       </div>
-      <div class="col-span-12 md:col-span-6 lg:col-span-3">
+      <div style="max-height:400px; overflow:auto !important" class="col-span-12 md:col-span-6 lg:col-span-4">
+       
         <BalCard
-          title="USDC"
-          imgSrc="/images/banners/element-usdc.svg"
           class="transition-shadow hover:shadow-xl"
-          hFull
-          growContent
+          imgSrc="https://pbs.twimg.com/profile_banners/1384941129796395010/1640465820/1500x500"
         >
-          <h6>USDC—ePyvUSDC</h6>
-          <p>
-            Element principal pool Yearn USDC v2 vault.
-          </p>
-          <template v-slot:footer>
-            <BalLink :href="EXTERNAL_LINKS.Element.Pools.USDC" external>
-              <span>{{ $t('viewOnElement') }}</span>
-              <BalIcon name="arrow-up-right" size="sm" class="ml-1" />
-            </BalLink>
-          </template>
+ <div>
+    <a class="twitter-timeline" href="https://twitter.com/0xSymmetric?ref_src=twsrc%5Etfw"></a> 
+  </div>
+  
         </BalCard>
+        
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 {
+    "cardOneText":"Symmetric makes trading crypto and earning rewards easy, efficient, and accessible to everyone because we have extremely low fees, high rewards, and unique options for investing your crypto",
     "aboutElementFinance": "Element is an open source protocol for fixed and variable yield markets. It is built on Balancer V2. View and manage your liquidity positions directly on Element.fi.",
     "accept": "Accept",
     "account": "Account",
@@ -642,7 +643,9 @@
     "value": "Value",
     "vault": "Vault",
     "viewAllAssets": "View all assets ({0})",
-    "viewAndManangeOnElement": "View and manage all pools on Element.fi",
+    "viewAndReadMoreCard1": "Read more about all new stuff coming to Symmetric V2",
+    "viewAndReadMoreCard2": "Read more about Partnership",
+    "viewAndManangeOnElement": "Read more about all new all pools on Element.fi",
     "viewFullWallet": "View full wallet",
     "viewLess": "View less",
     "viewOnElement": "View on Element.fi",
