@@ -288,7 +288,7 @@ export default {
         allTokenLists.value
       );
 
-      state.injectedTokens = { ...state.injectedTokens , ...newTokens };
+      state.injectedTokens = { ...state.injectedTokens, ...newTokens };
     }
 
     /**

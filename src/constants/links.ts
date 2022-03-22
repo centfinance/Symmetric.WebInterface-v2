@@ -21,9 +21,11 @@ export const EXTERNAL_LINKS = {
         'https://app.element.fi/pools/0x787546Bf2c05e3e19e2b6BDE57A203da7f682efF'
     }
   },
-  Symmetric:{
-    Medium: 'https://medium.com/@Symmetric.Finance/whats-coming-with-symmetric-v2-b168b3830989',
-    PrimeDaoMedium: 'https://medium.com/@Symmetric.Finance/announcing-the-symmetric-primedao-partnership-e8557301145b',
+  Symmetric: {
+    Medium:
+      'https://medium.com/@Symmetric.Finance/whats-coming-with-symmetric-v2-b168b3830989',
+    PrimeDaoMedium:
+      'https://medium.com/@Symmetric.Finance/announcing-the-symmetric-primedao-partnership-e8557301145b'
   },
   Copper: {
     Auctions: (poolAddress: string, networkPrefix = '') =>
