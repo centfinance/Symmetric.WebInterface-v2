@@ -1,16 +1,16 @@
 export const EXTERNAL_LINKS = {
   Balancer: {
-    Home: 'https://balancer.fi',
+    Home: 'https://symmetric.finance',
     BalForGas:
       'https://docs.balancer.finance/core-concepts/bal-balancer-governance-token/bal-for-gas',
-    PoolsV1Dashboard: 'https://pools.balancer.exchange/#/dashboard',
-    PoolsV1Explore: 'https://pools.balancer.exchange/#/explore'
+    PoolsV1Dashboard: 'https://celo-pools.symmetric.exchange/#/',
+    PoolsV1Explore: 'https://celo-pools.symmetric.exchange/#/explore'
   },
   Gauntlet: {
     Home: 'https://gauntlet.network'
   },
   Ethereum: {
-    Wallets: 'https://ethereum.org/en/wallets'
+    Wallets: 'https://docs.celo.org/getting-started/wallets'
   },
   Element: {
     Earn: 'https://app.element.fi/earn',
@@ -20,6 +20,12 @@ export const EXTERNAL_LINKS = {
       USDC:
         'https://app.element.fi/pools/0x787546Bf2c05e3e19e2b6BDE57A203da7f682efF'
     }
+  },
+  Symmetric: {
+    Medium:
+      'https://medium.com/@Symmetric.Finance/whats-coming-with-symmetric-v2-b168b3830989',
+    PrimeDaoMedium:
+      'https://medium.com/@Symmetric.Finance/announcing-the-symmetric-primedao-partnership-e8557301145b'
   },
   Copper: {
     Auctions: (poolAddress: string, networkPrefix = '') =>

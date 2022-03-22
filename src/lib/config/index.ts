@@ -5,10 +5,11 @@ import polygon from './polygon.json';
 import arbitrum from './arbitrum.json';
 import docker from './docker.json';
 import test from './test.json';
+import celo from './celo.json';
 import { Network } from '@/composables/useNetwork';
 
 export interface Config {
-  key: string;
+  key: string | '42220';
   chainId: Network | 12345 | 17;
   chainName: string;
   name: string;
@@ -73,6 +74,7 @@ const config: Record<Config['chainId'], Config> = {
   [Network.RINKEBY]: rinkeby,
   [Network.POLYGON]: polygon,
   [Network.ARBITRUM]: arbitrum,
+  [Network.CELO]: celo,
   12345: test,
   // @ts-ignore
   17: docker

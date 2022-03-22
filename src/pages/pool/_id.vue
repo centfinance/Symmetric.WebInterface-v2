@@ -300,9 +300,12 @@ export default defineComponent({
 
     const poolTypeLabel = computed(() => {
       if (!pool.value) return '';
-      const key = POOLS.Factories[pool.value.factory];
-
-      return key ? t(key) : t('unknownPoolType');
+      const key: string | undefined = Object.keys(POOLS.Factories).find(
+        (key: string) => key.toLowerCase() === pool.value?.factory.toLowerCase()
+      );
+      if (!key) return '';
+      const value = POOLS.Factories[key];
+      return value ? t(value) : t('unknownPoolType');
     });
 
     const poolFeeLabel = computed(() => {

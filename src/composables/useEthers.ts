@@ -66,7 +66,6 @@ export default function useEthers() {
   ): Promise<boolean> {
     let confirmed = false;
     const retries = shouldRetry ? 5 : 1;
-    console.log('dingodng', retries);
     processedTxs.value.add(tx.hash);
 
     try {
@@ -88,8 +87,9 @@ export default function useEthers() {
             id: realTx.txHash
           });
         }
-      } catch {
+      } catch (e) {
         // eslint-disable-next-line no-empty
+        console.error('Error in txListener 1: ', e);
       }
 
       // Attempt to finalize transaction so that the pending tx watcher won't check the tx again.
@@ -102,7 +102,7 @@ export default function useEthers() {
       }
       confirmed = true;
     } catch (error) {
-      console.error(error);
+      console.error('Error in txListener 2: ', error);
       callbacks.onTxFailed(tx);
     }
 

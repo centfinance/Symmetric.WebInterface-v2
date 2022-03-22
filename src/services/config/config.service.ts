@@ -2,6 +2,7 @@ import { Config } from '@/lib/config';
 import configs from '@/lib/config';
 import template from '@/lib/utils/template';
 import { Network, networkId } from '@/composables/useNetwork';
+// TODO:
 
 interface Env {
   APP_ENV: string;
@@ -20,7 +21,8 @@ export default class ConfigService {
     return {
       APP_ENV: process.env.VUE_APP_ENV || 'development',
       NETWORK: networkId.value,
-      APP_DOMAIN: process.env.VUE_APP_DOMAIN || 'app.balancer.fi',
+      APP_DOMAIN:
+        process.env.VUE_APP_DOMAIN || 'dev-symmv2-celo.symmetric.exchange',
       IPFS_NODE: process.env.VUE_APP_IPFS_NODE || 'cloudflare-ipfs.com',
       BLOCKNATIVE_DAPP_ID:
         process.env.VUE_APP_BLOCKNATIVE_DAPP_ID || 'MISSING_KEY',

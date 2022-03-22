@@ -70,22 +70,10 @@ export default defineComponent({
     // DATA
     const networks = [
       {
-        id: 'ethereum',
-        name: 'Ethereum',
-        subdomain: 'app',
-        key: '1'
-      },
-      {
-        id: 'polygon',
-        name: 'Polygon',
-        subdomain: 'polygon',
-        key: '137'
-      },
-      {
-        id: 'arbitrum',
-        name: 'Arbitrum',
-        subdomain: 'arbitrum',
-        key: '42161'
+        id: 'celo',
+        name: 'Celo',
+        subdomain: 'celo',
+        key: '42220'
       }
     ];
 
@@ -104,7 +92,7 @@ export default defineComponent({
     }
 
     function appUrl(network: Network): string {
-      return `https://${network.subdomain}.balancer.fi`;
+      return `https://${network.subdomain}.symmetric.exchange`;
     }
 
     function isActive(network: Network): boolean {

@@ -1,8 +1,8 @@
 <template>
   <div>
     <div v-if="account" class="flex items-center">
-      <AppNavActivityBtn />
-      <AppNavClaimBtn v-if="liquidityMiningSupported" />
+      <!-- <AppNavActivityBtn /> -->
+      <!-- <AppNavClaimBtn v-if="liquidityMiningSupported" /> -->
       <AppNavAccountBtn />
     </div>
     <BalBtn
@@ -28,17 +28,17 @@ import useBreakpoints from '@/composables/useBreakpoints';
 import useNumbers from '@/composables/useNumbers';
 
 import AppNavAccountBtn from './AppNavAccountBtn.vue';
-import AppNavClaimBtn from './AppNavClaimBtn.vue';
+// import AppNavClaimBtn from './AppNavClaimBtn.vue';
 import useWeb3 from '@/services/web3/useWeb3';
-import AppNavActivityBtn from './AppNavActivityBtn/AppNavActivityBtn.vue';
+// import AppNavActivityBtn from './AppNavActivityBtn/AppNavActivityBtn.vue';
 
 export default defineComponent({
   name: 'AppNavActions',
 
   components: {
-    AppNavAccountBtn,
-    AppNavClaimBtn,
-    AppNavActivityBtn
+    AppNavAccountBtn
+    // AppNavClaimBtn
+    // AppNavActivityBtn
   },
 
   setup() {
@@ -53,13 +53,18 @@ export default defineComponent({
       isMainnet,
       isKovan,
       isPolygon,
-      isArbitrum
+      isArbitrum,
+      isCelo
     } = useWeb3();
 
     // COMPUTED
     const liquidityMiningSupported = computed(
       () =>
-        isMainnet.value || isPolygon.value || isArbitrum.value || isKovan.value
+        isMainnet.value ||
+        isPolygon.value ||
+        isArbitrum.value ||
+        isKovan.value ||
+        isCelo.value
     );
 
     // METHODS

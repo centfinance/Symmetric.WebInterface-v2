@@ -10,20 +10,20 @@
     @error="error = true"
     class="rounded-full inline-block leading-none shadow-sm"
   />
-  <Avatar v-else :address="address" :size="size" />
+  <!-- <Avatar v-else :address="address" :size="size" /> -->
 </template>
 
 <script>
 import { defineComponent, toRefs, ref, computed, watch } from 'vue';
 import useTokens from '@/composables/useTokens';
-import Avatar from '../../images/Avatar.vue';
+// import Avatar from '../../images/Avatar.vue';
 import useUrls from '@/composables/useUrls';
 
 export default defineComponent({
   name: 'BalAsset',
 
   components: {
-    Avatar
+    // Avatar
   },
 
   props: {

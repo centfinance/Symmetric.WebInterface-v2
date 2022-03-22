@@ -68,6 +68,7 @@ export default class MetadataConcern {
     try {
       const network = this.service.configService.network.key;
       const multi = new Multicaller(network, this.service.provider, erc20Abi);
+      console.log('multi', multi);
       const metaDict = {};
 
       addresses.forEach(address => {
@@ -83,6 +84,7 @@ export default class MetadataConcern {
         multi.call(`${address}.decimals`, address, 'decimals');
       });
 
+      console.log('metaDict', metaDict);
       return await multi.execute(metaDict);
     } catch (error) {
       console.error('Failed to fetch onchain meta', addresses, error);

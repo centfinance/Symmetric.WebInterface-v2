@@ -12,7 +12,7 @@
       <div class="flex mt-1">
         <div class="flex">
           <div class="relative">
-            <Avatar :iconURI="profile?.avatar" :address="account" size="44" />
+            <!-- <Avatar :iconURI="profile?.avatar" :address="account" :size="avatarSize" /> -->
             <div class="connector-icon-wrapper">
               <img
                 :src="connectorLogo"
@@ -22,7 +22,8 @@
           </div>
           <div class="ml-2">
             <div class="address flex items-baseline">
-              <div v-text="_shorten(account)" />
+              <div v-if="name" v-text="name" />
+              <div v-else v-text="_shorten(account)" />
               <div class="ml-3 flex">
                 <BalTooltip width="auto">
                   <template v-slot:activator>
@@ -172,7 +173,7 @@
 </template>
 
 <script>
-import { defineComponent, reactive, computed, toRefs } from 'vue';
+import { defineComponent, reactive, computed, toRefs, ref } from 'vue';
 import { useStore } from 'vuex';
 import {
   getConnectorName,
@@ -180,7 +181,7 @@ import {
 } from '@/services/web3/web3.plugin';
 import { GP_SUPPORTED_NETWORKS } from '@/services/gnosis/constants';
 import AppSlippageForm from '@/components/forms/AppSlippageForm.vue';
-import Avatar from '@/components/images/Avatar.vue';
+// import Avatar from '@/components/images/Avatar.vue';
 import useWeb3 from '@/services/web3/useWeb3';
 
 import {
@@ -192,6 +193,7 @@ import { TradeInterface } from '@/store/modules/app';
 import useEthereumTxType from '@/composables/useEthereumTxType';
 import { ENABLE_LEGACY_TRADE_INTERFACE } from '@/composables/trade/constants';
 import { Network } from '@/composables/useNetwork';
+import { getName } from '@/lib/utils/nomspace';
 
 const locales = {
   'en-US': 'English',
@@ -210,8 +212,8 @@ const locales = {
 
 export default defineComponent({
   components: {
-    AppSlippageForm,
-    Avatar
+    AppSlippageForm
+    // Avatar
   },
 
   setup() {
@@ -236,7 +238,8 @@ export default defineComponent({
       locales,
       tradeLiquidityOptions,
       tradeInterfaceOptions,
-      copiedAddress: false
+      copiedAddress: false,
+      avatarSize: 44
     });
 
     // COMPUTED
@@ -296,6 +299,10 @@ export default defineComponent({
       }, 2 * 1000);
     }
 
+    // get name with nomspace
+    const name = ref('');
+    getName(account.value).then(data => (name.value = data));
+
     return {
       // data
       ...toRefs(data),
@@ -303,6 +310,7 @@ export default defineComponent({
       ENABLE_LEGACY_TRADE_INTERFACE,
       // computed
       account,
+      name,
       profile,
       appTradeLiquidity,
       appTradeInterface,

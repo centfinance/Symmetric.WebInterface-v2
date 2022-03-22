@@ -1,0 +1,8 @@
+{
+    "network": "celo",
+    "chainId": 42220,
+    "defaultPrecision": 2,
+    "rpcUrl": "https://forno.celo.org",
+    "wsUrl": "wss://forno.celo.org/ws",
+    "ENSRegistry": "0x3DE51c3960400A0F752d3492652Ae4A0b2A36FB3"
+  }
