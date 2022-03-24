@@ -2156,10 +2156,10 @@
     "@symmetric-v2/sor2" "^2.1.0-beta.4"
     "lodash" "^4.17.21"
 
-"@symmetric-v2/sor2@^2.1.0-beta.4", "@symmetric-v2/sor2@^2.1.0-beta.5":
-  "integrity" "sha512-MJ0QIN8NObAXfP38+sp8JRMcoQh4EuZoCNB/5DRtzmwehCcXyAdTZcOgRNQJPfk3qPrxNmhSIaxIIclLoZXqZQ=="
-  "resolved" "https://registry.npmjs.org/@symmetric-v2/sor2/-/sor2-2.1.0-beta.5.tgz"
-  "version" "2.1.0-beta.5"
+"@symmetric-v2/sor2@^2.1.0-beta.4", "@symmetric-v2/sor2@^2.1.0-beta.6":
+  "integrity" "sha512-uzr/NefaNqoIA3gnJr0GI7+yZS7nYEGoj/x7GiSajuYF2dttjLLnazt8GhmcQ05F2G2bl1SGtHV8fF8BqR+xog=="
+  "resolved" "https://registry.npmjs.org/@symmetric-v2/sor2/-/sor2-2.1.0-beta.6.tgz"
+  "version" "2.1.0-beta.6"
   dependencies:
     "@georgeroman/balancer-v2-pools" "0.0.7"
     "isomorphic-fetch" "^2.2.1"
