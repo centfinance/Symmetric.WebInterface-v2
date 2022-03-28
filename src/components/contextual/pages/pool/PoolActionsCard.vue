@@ -87,7 +87,7 @@ const fiatTotal = computed(() => {
         tag="router-link"
         :to="{ name: 'invest' }"
         :label="$t('invest')"
-        color="gradient"
+        color="orange"
         block
       />
       <BalBtn

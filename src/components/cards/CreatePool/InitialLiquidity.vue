@@ -291,7 +291,7 @@ function onAlertMountChange() {
               >
                 <button
                   @click="optimiseLiquidity(true)"
-                  class="bg-clip-text text-sm text-transparent font-medium bg-gradient-to-tr from-blue-500 to-pink-500  hover:from-blue-800 hover:to-pink-800"
+                  class="bg-clip-text text-sm text-transparent font-medium bg-orange-50  hover:bg-orange-100"
                 >
                   {{ t('optimize') }}
                 </button>
