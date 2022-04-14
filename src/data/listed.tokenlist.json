@@ -37,6 +37,14 @@
             "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/celo/assets/0xD8763CBa276a3738E6DE85b4b3bF5FDed6D6cA73/logo.png"
         },
         {
+            "address": "0x471EcE3750Da237f93B8E339c536989b8978a438",
+            "chainId": 42220,
+            "name": "Celo",
+            "symbol": "CELO",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/celo/assets/0x471EcE3750Da237f93B8E339c536989b8978a438/logo.png"
+        },
+        {
             "address": "0x20677d4f3d0F08e735aB512393524A3CfCEb250C",
             "chainId": 42220,
             "name": "Ariswap",
