@@ -192,6 +192,9 @@ export default defineComponent({
       if (networkConfig.chainId === Network.CELO) {
         return 'Celo';
       }
+      if (networkConfig.chainId === Network.GNOSIS) {
+        return 'Gnosis';
+      }
       return 'Unknown Network';
     });
 
@@ -210,6 +213,10 @@ export default defineComponent({
       }
       if (networkConfig.chainId === Network.CELO) {
         return `SYMM distributions on Celo can be claimed weekly by tapping the
+        liquidity mining claim tool in the header.`;
+      }
+      if (networkConfig.chainId === Network.GNOSIS) {
+        return `SYMM distributions on Gnosis can be claimed weekly by tapping the
         liquidity mining claim tool in the header.`;
       }
       return '';

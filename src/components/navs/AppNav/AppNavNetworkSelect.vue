@@ -70,6 +70,12 @@ export default defineComponent({
     // DATA
     const networks = [
       {
+        id: 'gnosis',
+        name: 'Gnosis',
+        subdomain: 'gnosis',
+        key: '100'
+      },
+      {
         id: 'celo',
         name: 'Celo',
         subdomain: 'celo',

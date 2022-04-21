@@ -65,6 +65,7 @@ const {
   isKovan,
   isPolygon,
   isCelo,
+  isGnosis,
   isMismatchedNetwork
 } = useWeb3();
 const { txListener } = useEthers();
@@ -106,6 +107,12 @@ const legacyClaimUI = computed(() => {
   } else if (isCelo.value) {
     return [
       { token: '$BAL', subdomain: 'claim-celo' },
+      { token: '$MCDEX', subdomain: 'claim-mcdex' },
+      { token: '$PICKLE', subdomain: 'claim-pickle' }
+    ];
+  } else if (isGnosis.value) {
+    return [
+      { token: '$BAL', subdomain: 'claim-gnosis' },
       { token: '$MCDEX', subdomain: 'claim-mcdex' },
       { token: '$PICKLE', subdomain: 'claim-pickle' }
     ];

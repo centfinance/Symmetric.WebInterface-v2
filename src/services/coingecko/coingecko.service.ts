@@ -6,6 +6,7 @@ export const getNativeAssetId = (chainId: string): string => {
   const mapping = {
     '1': 'ethereum',
     '42': 'ethereum',
+    '100': 'gnosis',
     '137': 'matic-network',
     '42161': 'ethereum',
     '42220': 'celo'
@@ -18,6 +19,7 @@ export const getPlatformId = (chainId: string): string => {
   const mapping = {
     '1': 'ethereum',
     '42': 'ethereum',
+    '100': 'xdai',
     '137': 'polygon-pos',
     '42161': 'arbitrum-one',
     '42220': 'celo'

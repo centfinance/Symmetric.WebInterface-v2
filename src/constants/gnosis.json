@@ -1,0 +1,8 @@
+{
+    "network": "gnosis",
+    "chainId": 100,
+    "defaultPrecision": 2,
+    "rpcUrl": "https://rpc.gnosischain.com",
+    "wsUrl": "wss://rpc.gnosischain.com/wss",
+    "ENSRegistry": "0x3DE51c3960400A0F752d3492652Ae4A0b2A36FB3"
+  }

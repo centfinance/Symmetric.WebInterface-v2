@@ -135,7 +135,6 @@ const activityRows = computed<ActivityRow[]>(() =>
  */
 function getJoinExitValue(amounts: PoolActivity['amounts']) {
   let total = bnum(0);
-
   for (let i = 0; i < amounts.length; i++) {
     const amount = amounts[i];
     const address = getAddress(props.tokens[i]);
