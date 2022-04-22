@@ -7,6 +7,10 @@
     "input": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "output": "0x04DF6e4121c27713ED22341E7c7Df330F56f289B"
   },
+  "100": {
+    "input": "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+    "output": "0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84"
+  },
   "137": {
     "input": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "output": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619"
