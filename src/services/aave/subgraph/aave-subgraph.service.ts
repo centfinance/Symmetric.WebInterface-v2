@@ -31,7 +31,7 @@ export default class AaveSubgraphService {
       case Network.CELO:
         return 42220;
       case Network.GNOSIS:
-          return 100;
+        return 100;
       default:
         return 13;
     }

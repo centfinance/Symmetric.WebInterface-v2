@@ -60,10 +60,10 @@ export const TOKEN_LIST_MAP: TokenListMapByNetwork = {
   '100': {
     Balancer: {
       Default:
-        'http://localhost:8080/listed.tokenlist.json',
+        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/addGnosisSupport/src/data/listed.tokenlist.json',
       // 'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/develop/src/lib/config/listed.tokenlist.json',
       Vetted:
-        'http://localhost:8080/listed.tokenlist.json'
+        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/addGnosisSupport/src/data/listed.tokenlist.json'
       // 'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/develop/src/lib/config/listed.tokenlist.json'
     },
     External: [

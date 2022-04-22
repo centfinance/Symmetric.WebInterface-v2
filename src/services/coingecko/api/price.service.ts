@@ -88,8 +88,7 @@ export class PriceService {
 
         // TODO: Put a better fix in for this
         let networkIdentity = this.platformId;
-        if (this.platformId == 'gnosis')
-        {
+        if (this.platformId == 'gnosis') {
           networkIdentity = 'xdai';
         }
         const endpoint = `/simple/token_price/${networkIdentity}?contract_addresses=${addressString}&vs_currencies=${this.fiatParam}`;
