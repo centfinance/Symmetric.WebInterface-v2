@@ -31,7 +31,7 @@
       "bFactory": "0x9B4214FD41cD24347A25122AC7bb6B479BED72Ac",
       "bActions": "0x88602D7ef1a3026daF96729938d6184cDAbbED95",
       "dsProxyRegistry": "0x46AD1cB076f43126B9a89FdC06f3C8FdF3EEe6e5",
-      "exchangeProxy": "",
+      "exchangeProxy": "0x48Cf5264bCfd23e411f4Eae7B950F7b95ba0079f",
       "merkleRedeem": "0x2B128E7d9fcd83a73f7b977Bc08894B388aD84cd",
       "merkleOrchard": "0x56f1F6e41A49C256aE2B37c3DC7f97E0CD7915c2",
       "multicall": "0xFAa296891cA6CECAF2D86eF5F7590316d0A17dA0",
