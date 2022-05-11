@@ -45,7 +45,7 @@
         :label="'Preview trade'"
         :disabled="tradeDisabled"
         :loading-label="$t('confirming')"
-        color="gradient"
+        color="symmetric"
         block
         @click.prevent="showTradePreviewModal"
       />

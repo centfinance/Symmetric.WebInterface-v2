@@ -33,7 +33,7 @@
             :href="EXTERNAL_LINKS.Balancer.Home"
             target="_blank"
             rel="noreferrer"
-            :color="darkMode ? 'white' : 'primary'"
+            :color="darkMode ? 'white' : 'symmetric'"
             outline
             @click="trackGoal(Goals.ClickHeroLearnMore)"
           >
