@@ -321,7 +321,7 @@ function onAlertMountChange() {
           :disabled="isExceedingWalletBalance"
           @click="proceed"
           block
-          color="gradient"
+          color="symmetric"
           >{{ t('preview') }}</BalBtn
         >
       </BalStack>
