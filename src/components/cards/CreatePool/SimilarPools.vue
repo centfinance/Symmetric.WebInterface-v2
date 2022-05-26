@@ -160,7 +160,7 @@ function cancel() {
       </BalAlert>
       <BalStack horizontal expandChildren>
         <BalBtn @click="cancel" block outline>Cancel</BalBtn>
-        <BalBtn @click="proceed" v-if="!existingPool" block color="gradient"
+        <BalBtn @click="proceed" v-if="!existingPool" block color="symmetric"
           >Continue anyway</BalBtn
         >
       </BalStack>
