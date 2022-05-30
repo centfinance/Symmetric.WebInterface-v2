@@ -98,7 +98,7 @@ export default defineComponent({
     }
 
     function appUrl(network: Network): string {
-      return `https://${network.subdomain}.symmetric.exchange`;
+      return `https://dev-symmv2-${network.subdomain}.symmetric.exchange/#/'`;
     }
 
     function isActive(network: Network): boolean {

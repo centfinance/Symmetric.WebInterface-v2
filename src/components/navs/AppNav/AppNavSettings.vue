@@ -253,6 +253,9 @@ export default defineComponent({
           case Network.KOVAN:
             color = 'purple';
             break;
+          case Network.GNOSIS:
+            color = 'purple';
+            break; 
           case Network.ROPSTEN:
             color = 'pink';
             break;
