@@ -296,7 +296,7 @@ async function onChangeFeeController(val: string) {
           :disabled="isProceedDisabled || isLoadingSimilarPools"
           type="submit"
           block
-          color="gradient"
+          color="symmetric"
           @click="proceed"
           >{{ $t('next') }}</BalBtn
         >

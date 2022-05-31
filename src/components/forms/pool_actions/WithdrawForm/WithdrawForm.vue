@@ -136,14 +136,14 @@ onBeforeMount(() => {
       <BalBtn
         v-if="!isWalletReady"
         :label="$t('connectWallet')"
-        color="gradient"
+        color="symmetric"
         block
         @click="toggleWalletSelectModal"
       />
       <BalBtn
         v-else
         :label="$t('preview')"
-        color="gradient"
+        color="symmetric"
         :disabled="
           !hasAmounts ||
             !hasValidInputs ||
