@@ -82,8 +82,9 @@ export const POOLS = {
   },
   Factories: {
     '0xa5bf2ddf098bb0ef6d120c98217dd6b141c74ee0': 'oracleWeightedPool',
-    '0x65823FD346325Dc131268555fE7aE2Be1919f83b': 'weightedPool', // Celo
-    '0x8A217be3f8745efc522C49C66e1618699AF5bFAD': 'stablePool', // Celo
+    '0x47B7bdA16AB8B617E976c83A2c3c8664944d8Ed2': 'weightedPool', // Celo
+    '0x7dF194500b8b8dcFe6A0b8E412f8a166c89Bf255': 'stablePool', // Celo
+    '0xe007Ba1c5665567175B4d462f8dba14506e7f592': 'liquidityBootstrappingPool', // Celo LBP
     '0x67d27634e44793fe63c467035e31ea8635117cd4': 'stablePool', // Metastable
     '0x751dfdace1ad995ff13c927f6f761c6604532c79': 'stablePool', // Kovan
     '0x590e544e7ca956bb878f8c873e82e65550d67d2f': 'stablePool', // Kovan Metastable

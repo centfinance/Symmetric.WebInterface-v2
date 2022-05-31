@@ -1,6 +1,6 @@
 {
   "name": "@symmetric-v2/frontend",
-  "version": "1.36.2",
+  "version": "1.37.1",
   "engines": {
     "node": "14.x",
     "npm": ">=7"
@@ -45,8 +45,8 @@
     "@sentry/browser": "^6.3.2",
     "@sentry/tracing": "^6.3.2",
     "@sentry/webpack-plugin": "^1.15.1",
-    "@symmetric-v2/sdk": "^0.0.18",
-    "@symmetric-v2/sor2": "^2.1.0-beta.5",
+    "@symmetric-v2/sdk": "^0.0.21",
+    "@symmetric-v2/sor2": "^2.1.0",
     "@tomfrench/ens-avatar-resolver": "^0.1.0",
     "@types/animejs": "^3.1.3",
     "@types/jest": "^24.0.19",
