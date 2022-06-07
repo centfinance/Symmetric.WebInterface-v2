@@ -9,6 +9,8 @@ import { configService } from '@/services/config/config.service';
 import useUserSettings from '@/composables/useUserSettings';
 import { TOKENS } from '@/constants/tokens';
 import useNetwork from '../useNetwork';
+import { subgraphRequest } from '@/lib/utils/subgraph';
+import queries from '@/composables/queries/queries.json';
 
 /**
  * TYPES
@@ -58,9 +60,25 @@ export default function useTokenPricesQuery(
         PER_PAGE * (page + 1)
       );
       console.log('Fetching', pageAddresses.length, 'prices');
+
+      // get SYMM price from v1 subgraph // todo: remove once symmv2 is supported
+      const symm2address = '0x8427bd503dd3169ccc9aff7326c15258bc305478';
+      const url =
+        'https://api.thegraph.com/subgraphs/name/centfinance/symmetricv1celo';
+      const subgraphRes = await subgraphRequest(
+        url,
+        queries['getSYMM2PriceCELO']
+      );
+      const symmPrice = subgraphRes?.tokenPrices[0].price;
+      const filterSymm = pageAddresses.filter(
+        addr => addr.toLowerCase() !== symm2address.toLowerCase()
+      );
+      const tokenPrices = await coingeckoService.prices.getTokens(filterSymm);
+
       prices = {
         ...prices,
-        ...(await coingeckoService.prices.getTokens(pageAddresses))
+        ...tokenPrices,
+        [symm2address]: { usd: Number(symmPrice) }
       };
     }
 

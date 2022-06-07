@@ -11,6 +11,8 @@ import { returnChecksum } from '@/lib/decorators/return-checksum.decorator';
 import { retryPromiseWithDelay } from '@/lib/utils/promise';
 import { twentyFourHoursInSecs } from '@/composables/useTime';
 import { fromUnixTime, getUnixTime, startOfHour } from 'date-fns';
+import { subgraphRequest } from '@/lib/utils/subgraph';
+import queries from '@/composables/queries/queries.json';
 
 /**
  * TYPES
@@ -128,8 +130,21 @@ export class PriceService {
       address => address !== this.appAddresses.wstETH
     );
 
+    // const celoAddress = '0x5d6b088dadd5da64b7cdbe44340f0dd72364d7a1';
+
+    // TODO - remove once symmv2 is supported
+    const symm2address = '0x8427bd503dd3169ccc9aff7326c15258bc305478';
+    addresses = addresses.filter(address => address !== symm2address);
+
     addresses = addresses.map(address => this.addressMapIn(address));
     const requests: Promise<HistoricalPriceResponse>[] = [];
+
+    if (
+      addresses.length === 1 &&
+      addresses[0].toLowerCase() === symm2address.toLowerCase()
+    ) {
+      addresses[0] = '0x20677d4f3d0F08e735aB512393524A3CfCEb250C'; // cUSD
+    }
 
     addresses.forEach(address => {
       const endpoint = `/coins/${
@@ -152,7 +167,27 @@ export class PriceService {
       start,
       aggregateBy
     );
-    return results;
+
+    const temp = { ...results };
+    // get SYMM price from v1 subgraph // todo: remove once symmv2 is supported
+    const url =
+      'https://api.thegraph.com/subgraphs/name/centfinance/symmetricv1celo';
+    const subgraphRes = await subgraphRequest(
+      url,
+      queries['getSYMM2PriceCELO']
+    );
+    const symmPrice = subgraphRes?.tokenPrices[0].price;
+
+    if (
+      addresses.length === 1 &&
+      addresses[0].toLowerCase() === symm2address.toLowerCase()
+    ) {
+      Object.keys(results).forEach(key => {
+        temp[key] = [symmPrice];
+      });
+    }
+
+    return temp;
   }
 
   private parsePaginatedTokens(paginatedResults: TokenPrices[]): TokenPrices {
