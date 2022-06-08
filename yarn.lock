@@ -2175,10 +2175,10 @@
   "resolved" "https://registry.npmjs.org/@soda/get-current-script/-/get-current-script-1.0.2.tgz"
   "version" "1.0.2"
 
-"@symmetric-v2/sdk@^0.0.21":
-  "integrity" "sha512-az/cogGg6C6jxc8llyitRnORsLRnQLn/knz918EW8RafrQ4Ar5BNVmPQ51rdngP99jDjgBYndlOgWItQJYPzDw=="
-  "resolved" "https://registry.npmjs.org/@symmetric-v2/sdk/-/sdk-0.0.21.tgz"
-  "version" "0.0.21"
+"@symmetric-v2/sdk@^0.0.22":
+  "integrity" "sha512-2+hFWYx8LVrYeiuMkk3ss6ZY4D8ZmHJSVTGzvbBFZXUIA+cPXA6rGA1uJg2hXnFcZ1th0PpoZZlNB2Q86MCKRg=="
+  "resolved" "https://registry.npmjs.org/@symmetric-v2/sdk/-/sdk-0.0.22.tgz"
+  "version" "0.0.22"
   dependencies:
     "@ethersproject/abi" "^5.4.0"
     "@ethersproject/abstract-signer" "^5.4.0"

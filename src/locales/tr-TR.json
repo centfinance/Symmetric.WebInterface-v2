@@ -1,5 +1,5 @@
 {
-    "aboutElementFinance":"Element, sabit ve değişken getiri piyasaları için açık kaynaklı bir protokoldür. Balancer V2 üzerine inşa edilmiştir. Likidite pozisyonlarınızı doğrudan Element.fi'de görüntüleyin ve yönetin.",
+    "aboutElementFinance":"Element, sabit ve değişken getiri piyasaları için açık kaynaklı bir protokoldür. Symmetric V2 üzerine inşa edilmiştir. Likidite pozisyonlarınızı doğrudan Element.fi'de görüntüleyin ve yönetin.",
     "accept":"Kabul etmek",
     "account":"Hesap",
     "action":"Aksiyon",
@@ -106,7 +106,7 @@
     "copperLaunchPromo":{
        "title":"A Copper adil lansman müzayede havuzu (FLA)",
        "description":"Copper, FLA'lar için bir platformdur—dünyanın dört bir yanından proje ve fikirlerin giriş engeli olmaksızın bireylerden para toplamasını sağlayan basit bir kitle fonlaması mekanizmasıdır.",
-       "poweredByBalancer":"Copper, Balancer V2 üzerine inşa edilmiştir ve FLA'larına güç sağlamak için Likidite Önyükleme Havuzlarını kullanır",
+       "poweredByBalancer":"Copper, Symmetric V2 üzerine inşa edilmiştir ve FLA'larına güç sağlamak için Likidite Önyükleme Havuzlarını kullanır",
        "buttonLabel":"Bu açık artırmayı Copper'da görüntüle"
     },
     "copyAddress":"Adresi kopyala",
@@ -115,7 +115,7 @@
        "title":"Havuz oluştur",
        "governanceFees":"Dengeleyici yönetiminin ücretleri yönetmesine izin ver",
        "swapFeeSuggestion":"%0,30, yerleşik belirteçlere sahip çoğu ağırlıklı havuz için en iyisidir. Daha egzotik çiftler için daha yükseğe çıkın.",
-       "governanceFeesTooltip":"Karları en üst düzeye çıkarmak için Balancer yönetimine bu havuzun ücretlerini dinamik olarak yönetme yeteneği vermek için bunu etkinleştirin. Ancak, Dengeleyici yönetişimin ücretleri gerçekten yönetme yükümlülüğü altında olmadığını ve büyük olasılıkla bunu yalnızca önemli ticaret hacmi varsa yapacaklarını unutmayın.",
+       "governanceFeesTooltip":"Karları en üst düzeye çıkarmak için Symmetric yönetimine bu havuzun ücretlerini dinamik olarak yönetme yeteneği vermek için bunu etkinleştirin. Ancak, Dengeleyici yönetişimin ücretleri gerçekten yönetme yükümlülüğü altında olmadığını ve büyük olasılıkla bunu yalnızca önemli ticaret hacmi varsa yapacaklarını unutmayın.",
        "fixedFeeRadioLabel":"Ücretleri kalıcı olarak başlangıç oranına sabitleyin",
        "dynamicFeeRadioLabel":"Seçtiğim bir adresten dinamik ücretlere izin ver",
        "setAnAddress":"Ücretleri kontrol etmek için bir adres belirleyin",
@@ -207,11 +207,11 @@
           "body":"Hala ticarete devam edebilirsiniz, ancak yüksek bir yüzdesi ticaret ücretleri tarafından tüketilecektir."
        }
     },
-    "goToBalancerV1Site":"Balancer V1 sitesine gidin ->",
+    "goToBalancerV1Site":"Symmetric V1 sitesine gidin ->",
     "highGasFees":"Yüksek gaz ücretleri? İşte yardım eli",
     "highPriceImpact":"Yüksek fiyat etkisi",
     "highPriceImpactDetailed":"Bu ticaret, piyasa fiyatını önemli ölçüde hareket ettiriyor.",
-    "highRiskPool":"Bu, bir veya daha fazla listelenmemiş jeton içeren daha yüksek riskli bir havuzdur. Bir likidite havuzu, yalnızca en zayıf jetonu kadar iyidir! Bir belirteç kara listeye alınmışsa, sonsuza kadar basılmışsa, dondurulmuşsa veya başka bir şekilde kullanılmışsa, bu havuzun değeri 0'a gidebilir. Balancer Labs, Kullanıcı Arabirimi veya Balancer protokolünü kullanmaktan kaynaklanan kayıplardan asla sorumlu değildir. Dikkatli olun ve kendi araştırmanızı yapın!",
+    "highRiskPool":"Bu, bir veya daha fazla listelenmemiş jeton içeren daha yüksek riskli bir havuzdur. Bir likidite havuzu, yalnızca en zayıf jetonu kadar iyidir! Bir belirteç kara listeye alınmışsa, sonsuza kadar basılmışsa, dondurulmuşsa veya başka bir şekilde kullanılmışsa, bu havuzun değeri 0'a gidebilir. Symmetric Labs, Kullanıcı Arabirimi veya Symmetric protokolünü kullanmaktan kaynaklanan kayıplardan asla sorumlu değildir. Dikkatli olun ve kendi araştırmanızı yapın!",
     "home":"Ev",
     "hourAbbrev":"h",
     "inYourWallet":"Cüzdanınızda:",
@@ -230,7 +230,7 @@
     "investment":"Yatırım",
     "investmentPool":"Yatırım havuzu",
     "investmentPools":"Yatırım havuzları",
-    "investmentPoolsAbout":"Balancer V2 likidite madenciliğine katılmak için $ BAL token kazanmak için varlıklarınızı yatırın.",
+    "investmentPoolsAbout":"Symmetric V2 likidite madenciliğine katılmak için $ BAL token kazanmak için varlıklarınızı yatırın.",
     "investmentPoolsAboutLink":"Daha fazla bilgi edinin ->",
     "investmentSettled":"Yatırımınız tamamlandı",
     "investmentSuccess":"Jetonlarınız bu havuza eklendi ve sizde<br> bu yatırımı temsil eden yeni bir LP jetonu aldı.",
@@ -388,7 +388,7 @@
     "seeMore":"Daha fazla gör",
     "seeOnExplorer":"Gezgini gör",
     "seePools":"Havuzları görün",
-    "seeV1BalancerInvestments":"Balancer V1 yatırımlarınızı görmek ister misiniz?",
+    "seeV1BalancerInvestments":"Symmetric V1 yatırımlarınızı görmek ister misiniz?",
     "select":"Seçiniz",
     "selectToken":"Jeton araması",
     "sell":"Satmak",
@@ -427,7 +427,7 @@
        "hiddenTokens":"+{0} jeton"
     },
     "tokenSearch":"Jeton arama",
-    "tokenWarning":"Balancer Labs, bu havuza likidite eklemenin doğrudan veya dolaylı bir sonucu olarak maruz kalabileceğiniz kayıplardan sorumlu değildir. Deflasyon belirteçleri, transfer ücretli belirteçler veya ERC20 ile uyumlu olmayan diğer belirteçler eklemeyin. Lütfen devam etmeden önce onaylayın.",
+    "tokenWarning":"Symmetric Labs, bu havuza likidite eklemenin doğrudan veya dolaylı bir sonucu olarak maruz kalabileceğiniz kayıplardan sorumlu değildir. Deflasyon belirteçleri, transfer ücretli belirteçler veya ERC20 ile uyumlu olmayan diğer belirteçler eklemeyin. Lütfen devam etmeden önce onaylayın.",
     "tokenWarningTitle":"Özel bir jeton eklediniz",
     "tokens":"Jetonlar",
     "tokensLowerCase":"jetonlar",
@@ -456,10 +456,10 @@
           "wrapUnwrap":"Wrap/Unwrap işlemleri her zaman bir gas işlemi gerektirdiğinden bu seçenek devre dışı bırakıldı."
        },
        "label":"Gazsız ticaret",
-       "tooltip":"Ücretsiz imza işlemleri, MEV koruması ve DeFi borsaları arasında akıllı ticaret yönlendirmesi ile en iyi fiyatlar için Balancer-Gnosis-Protocol (CowSwap) üzerinde 'gazsız işlem yapın'. Yalnızca gaz kullanan Balancer likidite havuzları aracılığıyla işlem yapmak için kapatın."
+       "tooltip":"Ücretsiz imza işlemleri, MEV koruması ve DeFi borsaları arasında akıllı ticaret yönlendirmesi ile en iyi fiyatlar için Balancer-Gnosis-Protocol (CowSwap) üzerinde 'gazsız işlem yapın'. Yalnızca gaz kullanan Symmetric likidite havuzları aracılığıyla işlem yapmak için kapatın."
     },
     "tradeInterface":"Ticaret arayüzü",
-    "tradeInterfaceTooltip":"Balancer V1 ve V2 havuzlarında en iyi likidite için Balancer'ı seçin. MEV korumasının keyfini çıkarırken gazsız siparişler kullanarak jeton alıp satmak için Gnosis'i seçin.",
+    "tradeInterfaceTooltip":"Symmetric V1 ve V2 havuzlarında en iyi likidite için Balancer'ı seçin. MEV korumasının keyfini çıkarırken gazsız siparişler kullanarak jeton alıp satmak için Gnosis'i seçin.",
     "tradeLiquidity":"Ticaret likiditesi",
     "tradeSettled":"Ticaretiniz halloldu",
     "tradeSubmissionError":{
@@ -498,7 +498,7 @@
        },
        "gasCosts":"Gaz maliyetleri"
     },
-    "tradesThroughWeth":"ETH yolundan Balancer likidite havuzları aracılığıyla yapılan işlemler ve gas ücretlerine tabidir.",
+    "tradesThroughWeth":"ETH yolundan Symmetric likidite havuzları aracılığıyla yapılan işlemler ve gas ücretlerine tabidir.",
     "transactionAction":{
        "trade":"Ticaret",
        "approve":"Onayla",

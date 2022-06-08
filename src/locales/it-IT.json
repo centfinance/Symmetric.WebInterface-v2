@@ -1,5 +1,5 @@
 {
-    "aboutElementFinance":"Element è un protocollo open source per mercati a rendimento fisso e variabile. È basato su Balancer V2. Visualizza e gestisci le tue posizioni di liquidità direttamente su Element.fi.",
+    "aboutElementFinance":"Element è un protocollo open source per mercati a rendimento fisso e variabile. È basato su Symmetric V2. Visualizza e gestisci le tue posizioni di liquidità direttamente su Element.fi.",
     "accept":"Accettare",
     "account":"account",
     "action":"Azione",
@@ -106,16 +106,16 @@
     "copperLaunchPromo":{
        "title":"Un pool di aste di lancio della fiera del rame (FLA)",
        "description":"Il rame è la piattaforma per i FLA, un semplice meccanismo di crowdfunding che consente a progetti e idee di tutto il mondo di raccogliere fondi da individui senza barriere all'ingresso.",
-       "poweredByBalancer":"Il rame è basato su Balancer V2 e utilizza Liquidity Bootstapping Pools per alimentare i suoi FLA",
+       "poweredByBalancer":"Il rame è basato su Symmetric V2 e utilizza Liquidity Bootstapping Pools per alimentare i suoi FLA",
        "buttonLabel":"Guarda questa asta su Copper"
     },
     "copyAddress":"Copia indirizzo",
     "create":"Creare",
     "createAPool":{
        "title":"Crea un pool",
-       "governanceFees":"Consenti alla governance di Balancer di gestire le commissioni",
+       "governanceFees":"Consenti alla governance di Symmetric di gestire le commissioni",
        "swapFeeSuggestion":"Lo 0,30% è il migliore per la maggior parte dei pool ponderati con token stabiliti. Vai più in alto per le coppie più esotiche.",
-       "governanceFeesTooltip":"Abilita questo per dare alla governance di Balancer la capacità di gestire dinamicamente le commissioni di questo pool al fine di massimizzare i profitti. Ma nota, la governance di Balancer non ha l'obbligo di gestire effettivamente le commissioni e probabilmente lo farà solo se c'è un volume di scambi significativo.",
+       "governanceFeesTooltip":"Abilita questo per dare alla governance di Symmetric la capacità di gestire dinamicamente le commissioni di questo pool al fine di massimizzare i profitti. Ma nota, la governance di Symmetric non ha l'obbligo di gestire effettivamente le commissioni e probabilmente lo farà solo se c'è un volume di scambi significativo.",
        "fixedFeeRadioLabel":"Fissa in modo permanente le commissioni al tasso iniziale",
        "dynamicFeeRadioLabel":"Consenti tariffe dinamiche da un indirizzo che scelgo",
        "setAnAddress":"Imposta un indirizzo per controllare le commissioni",
@@ -207,11 +207,11 @@
           "body":"Puoi ancora procedere con lo scambio, ma un'alta percentuale sarà consumata dalle commissioni di scambio."
        }
     },
-    "goToBalancerV1Site":"Vai al sito di Balancer V1 ->",
+    "goToBalancerV1Site":"Vai al sito di Symmetric V1 ->",
     "highGasFees":"Commissioni sul gas elevate? Ecco una mano amica",
     "highPriceImpact":"Impatto sul prezzo elevato",
     "highPriceImpactDetailed":"Questo commercio sta spostando in modo significativo il prezzo di mercato.",
-    "highRiskPool":"Questo è un pool ad alto rischio che contiene uno o più token non elencati. Un pool di liquidità è buono solo quanto il suo token più debole! Se un token fosse inserito nella lista nera, coniato all'infinito, congelato o sfruttato in qualsiasi altro modo, il valore di questo pool potrebbe andare a 0. Balancer Labs non è mai responsabile per le perdite subite tramite l'utilizzo della nostra interfaccia utente o del protocollo Balancer. Fai attenzione e fai le tue ricerche!",
+    "highRiskPool":"Questo è un pool ad alto rischio che contiene uno o più token non elencati. Un pool di liquidità è buono solo quanto il suo token più debole! Se un token fosse inserito nella lista nera, coniato all'infinito, congelato o sfruttato in qualsiasi altro modo, il valore di questo pool potrebbe andare a 0. Symmetric Labs non è mai responsabile per le perdite subite tramite l'utilizzo della nostra interfaccia utente o del protocollo Balancer. Fai attenzione e fai le tue ricerche!",
     "home":"Home",
     "hourAbbrev":"h",
     "inYourWallet":"Nel tuo portafoglio:",
@@ -230,7 +230,7 @@
     "investment":"Investimento",
     "investmentPool":"Pool di investimento",
     "investmentPools":"Pool di investimento",
-    "investmentPoolsAbout":"Metti in gioco le tue risorse per ottenere gettoni $bal partecipando all'estrazione di liquidità di Balancer V2.",
+    "investmentPoolsAbout":"Metti in gioco le tue risorse per ottenere gettoni $bal partecipando all'estrazione di liquidità di Symmetric V2.",
     "investmentPoolsAboutLink":"Ulteriori informazioni ->",
     "investmentSettled":"Il tuo investimento è stato risolto",
     "investmentSuccess":"I tuoi gettoni sono stati aggiunti a questo pool e tu l'hai fatto<br> ha ricevuto un nuovo token LP che rappresenta questo investimento.",
@@ -244,7 +244,7 @@
     "liquidityMining":"Estrazione di liquidità",
     "liquidityMiningAPR":"Estrazione di liquidità APR",
     "liquidityMiningPopover":{
-       "airdropEligibility":"Le persone che forniscono liquidità a pool di investimento idonei o fanno trading su coppie di token idonee ricevono distribuzioni settimanali di $BAL come incentivi. I possessori di token $BAL possiedono il protocollo Balancer e possono contribuire a plasmare il suo futuro votando sulle proposte di governance.",
+       "airdropEligibility":"Le persone che forniscono liquidità a pool di investimento idonei o fanno trading su coppie di token idonee ricevono distribuzioni settimanali di $BAL come incentivi. I possessori di token $BAL possiedono il protocollo Symmetric e possono contribuire a plasmare il suo futuro votando sulle proposte di governance.",
        "airdropExplainer":"Le distribuzioni settimanali dall'estrazione di liquidità su {0} vengono trasmesse il mercoledì, inviate direttamente al tuo portafoglio utilizzando disperde.app",
        "claimFreezeWarning":{
           "description":"Poiché hai diverse settimane di token non reclamati, lo schermo potrebbe bloccarsi dopo aver premuto il pulsante di richiesta durante l'elaborazione. Lascia il tuo browser aperto e il tuo portafoglio alla fine si aprirà per consentirti di completare il reclamo.",
@@ -261,7 +261,7 @@
        },
        "title":"Incentivi token"
     },
-    "liquidityProviderCopy":"Le persone che forniscono liquidità ai pool di investimento idonei o fanno trading su coppie di token idonee ricevono distribuzioni settimanali di $BAL come incentivi. I possessori di token $BAL possiedono il protocollo Balancer e possono contribuire a plasmare il suo futuro votando sulle proposte di governance.",
+    "liquidityProviderCopy":"Le persone che forniscono liquidità ai pool di investimento idonei o fanno trading su coppie di token idonee ricevono distribuzioni settimanali di $BAL come incentivi. I possessori di token $BAL possiedono il protocollo Symmetric e possono contribuire a plasmare il suo futuro votando sulle proposte di governance.",
     "loadMore":"Carica di più",
     "loading":"Caricamento in corso...",
     "loadingBestPrice":"Alla ricerca del miglior prezzo...",
@@ -388,7 +388,7 @@
     "seeMore":"Vedi altro",
     "seeOnExplorer":"Vedi su explorer",
     "seePools":"Vedi pool",
-    "seeV1BalancerInvestments":"Vuoi vedere i tuoi investimenti in Balancer V1?",
+    "seeV1BalancerInvestments":"Vuoi vedere i tuoi investimenti in Symmetric V1?",
     "select":"Selezionare",
     "selectToken":"Ricerca di token",
     "sell":"Vendere",
@@ -406,7 +406,7 @@
     "swapFeeManager":"Gestore delle commissioni di scambio",
     "switchNetwork":"Cambia rete",
     "symbol":"Simbolo",
-    "tableShowsBalancerV2Pools":"Questa tabella mostra solo i pool Balancer V2.",
+    "tableShowsBalancerV2Pools":"Questa tabella mostra solo i pool Symmetric V2.",
     "theme":"Tema",
     "thirdPartyRewards":{
        "apr":{
@@ -427,7 +427,7 @@
        "hiddenTokens":"+{0} gettoni"
     },
     "tokenSearch":"Ricerca token",
-    "tokenWarning":"Balancer Labs non è responsabile per eventuali perdite che potresti subire come risultato diretto o indiretto dell'aggiunta di liquidità a questo pool. Non aggiungere token deflazionistici, token con commissioni di trasferimento o altri token non conformi a ERC20. Si prega di riconoscere prima di continuare.",
+    "tokenWarning":"Symmetric non è responsabile per eventuali perdite che potresti subire come risultato diretto o indiretto dell'aggiunta di liquidità a questo pool. Non aggiungere token deflazionistici, token con commissioni di trasferimento o altri token non conformi a ERC20. Si prega di riconoscere prima di continuare.",
     "tokenWarningTitle":"Hai aggiunto un token personalizzato",
     "tokens":"Gettoni",
     "tokensLowerCase":"gettoni",
@@ -456,10 +456,10 @@
           "wrapUnwrap":"Questa opzione è stata disabilitata perché le transazioni Wrap/Unwrap richiedono sempre una transazione di gas."
        },
        "label":"Commercio senza gas",
-       "tooltip":"'Trade gasless' sul protocollo Balancer-Gnosis (CowSwap) per operazioni di firma gratuite, protezione MEV e i migliori prezzi con instradamento intelligente degli scambi attraverso gli scambi DeFi. Disattivalo per fare trading solo attraverso i pool di liquidità di Balancer utilizzando il gas."
+       "tooltip":"'Trade gasless' sul protocollo Balancer-Gnosis (CowSwap) per operazioni di firma gratuite, protezione MEV e i migliori prezzi con instradamento intelligente degli scambi attraverso gli scambi DeFi. Disattivalo per fare trading solo attraverso i pool di liquidità di Symmetric utilizzando il gas."
     },
     "tradeInterface":"Interfaccia commerciale",
-    "tradeInterfaceTooltip":"Scegli Balancer per la migliore liquidità tra i pool Balancer V1 e V2. Scegli Gnosis per acquistare e vendere token utilizzando ordini senza gas godendo della protezione MEV.",
+    "tradeInterfaceTooltip":"Scegli Symmetric per la migliore liquidità tra i pool Symmetric V1 e V2. Scegli Gnosis per acquistare e vendere token utilizzando ordini senza gas godendo della protezione MEV.",
     "tradeLiquidity":"Liquidità commerciale",
     "tradeSettled":"Il tuo affare si è risolto",
     "tradeSubmissionError":{
@@ -498,7 +498,7 @@
        },
        "gasCosts":"Costi del gas"
     },
-    "tradesThroughWeth":"Le negoziazioni da ETH passano attraverso i pool di liquidità di Balancer e comportano commissioni sul gas.",
+    "tradesThroughWeth":"Le negoziazioni da ETH passano attraverso i pool di liquidità di Symmetric e comportano commissioni sul gas.",
     "transactionAction":{
        "trade":"Commerciare",
        "approve":"Approvare",
@@ -546,8 +546,8 @@
     "transactionType":"Tipo di transazione",
     "trendingPairs":"Coppie di tendenza",
     "unallocated":"Non allocato",
-    "unavailableOnNetwork":"Scusa! Balancer non disponibile su questa rete",
-    "unavailableOnNetworkWithName":"Scusa! Balancer non disponibile su {0}",
+    "unavailableOnNetwork":"Scusa! Symmetric non disponibile su questa rete",
+    "unavailableOnNetworkWithName":"Scusa! Symmetric non disponibile su {0}",
     "unknown":"Sconosciuto",
     "unknownPoolType":"Tipo di pool sconosciuto",
     "unlock":"Sbloccare",
