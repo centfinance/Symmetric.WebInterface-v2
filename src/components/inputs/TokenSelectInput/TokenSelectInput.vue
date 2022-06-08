@@ -79,14 +79,14 @@ function tokenFor(option: string): TokenInfo {
       <span class="text-base font-medium">
         {{ token?.symbol }}
       </span>
-      <span v-if="Number(weight) > 0" class="text-gray-500 ml-2">
+      <span v-if="Number(weight) > 0" class="ml-2 text-gray-500">
         {{ fNum(weight, 'percent_lg') }}
       </span>
       <BalIcon
         v-if="!fixed"
         name="chevron-down"
         size="sm"
-        class="text-blue-500 group-hover:text-pink-500 ml-2"
+        class="ml-2 text-blue-500 group-hover:text-pink-500"
       />
     </div>
     <BalDropdown
@@ -103,13 +103,13 @@ function tokenFor(option: string): TokenInfo {
           <span class="text-base font-medium">
             {{ token?.symbol }}
           </span>
-          <span v-if="Number(weight) > 0" class="text-gray-500 ml-2">
+          <span v-if="Number(weight) > 0" class="ml-2 text-gray-500">
             {{ fNum(weight, 'percent_lg') }}
           </span>
           <BalIcon
             name="chevron-down"
             size="sm"
-            class="text-blue-500 group-hover:text-pink-500 ml-2"
+            class="ml-2 text-blue-500 group-hover:text-pink-500"
           />
         </div>
       </template>
@@ -127,7 +127,7 @@ function tokenFor(option: string): TokenInfo {
           <BalIcon
             v-if="optionToken.address === modelValue"
             name="check"
-            class="text-blue-500 ml-4"
+            class="ml-4 text-blue-500"
           />
         </div>
       </template>
@@ -145,7 +145,7 @@ function tokenFor(option: string): TokenInfo {
     <teleport to="#modal">
       <SelectTokenModal
         v-if="openTokenModal"
-        :excludedTokens="[...excludedTokens, modelValue]"
+        :excludedTokens="[ modelValue]"
         :includeEther="true"
         :disableInjection="disableInjection"
         @close="openTokenModal = false"
