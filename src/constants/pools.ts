@@ -2,7 +2,7 @@ export const POOLS = {
   Pagination: {
     PerPage: 10
   },
-  DelegateOwner: '0xc72B6b8e63108E38aD363A0504C3CA8E25dEdcCB',
+  DelegateOwner: '0x2088DAdbd1D068b8A80894A4bb56BCD575c4AfFD',
   ZeroAddress: '0x0000000000000000000000000000000000000000',
   DynamicFees: {
     Gauntlet: [
