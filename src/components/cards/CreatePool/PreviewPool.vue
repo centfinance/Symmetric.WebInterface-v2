@@ -134,14 +134,14 @@ function getSwapFeeManager() {
             v-if="poolCreated"
             size="8"
             color="green"
-            class="text-white mr-2"
+            class="mr-2 text-white"
           >
             <BalIcon name="check" />
           </BalCircle>
           <BalStack horizontal align="center" spacing="xs">
             <button
               @click="goBack"
-              class="text-blue-500 hover:text-blue-700 flex"
+              class="flex text-blue-500 hover:text-blue-700"
             >
               <BalIcon class="flex" name="chevron-left" />
             </button>
@@ -150,7 +150,7 @@ function getSwapFeeManager() {
           </BalStack>
         </div>
         <BalCard shadow="none" noPad>
-          <div class="bg-gray-50 dark:bg-gray-700 p-2">
+          <div class="p-2 bg-gray-50 dark:bg-gray-700">
             <h6 class="text-sm">
               {{ $t('createAPool.tokensAndSeedLiquidity') }}
             </h6>
@@ -198,16 +198,16 @@ function getSwapFeeManager() {
           </BalStack>
         </BalCard>
         <BalCard shadow="none" noPad>
-          <div class="bg-gray-50 dark:bg-gray-700 p-2">
+          <div class="p-2 bg-gray-50 dark:bg-gray-700">
             <h6 class="text-sm">{{ $t('summary') }}</h6>
           </div>
           <BalStack vertical spacing="xs" class="p-3">
             <BalStack horizontal justify="between">
-              <span class="text-sm">{{ $t('poolSymbol') }}:</span>
+              <span class="text-sm">{{ $t('poolName') }}:</span>
               <BalInlineInput size="xs" v-model="poolName" inputAlignRight />
             </BalStack>
             <BalStack horizontal justify="between">
-              <span class="text-sm">{{ $t('poolName') }}:</span>
+              <span class="text-sm">{{ $t('poolSymbol') }}:</span>
               <BalInlineInput size="xs" v-model="poolSymbol" inputAlignRight />
             </BalStack>
             <BalStack horizontal justify="between">

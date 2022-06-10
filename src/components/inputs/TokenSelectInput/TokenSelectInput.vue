@@ -145,7 +145,7 @@ function tokenFor(option: string): TokenInfo {
     <teleport to="#modal">
       <SelectTokenModal
         v-if="openTokenModal"
-        :excludedTokens="[ modelValue]"
+        :excludedTokens="[modelValue]"
         :includeEther="true"
         :disableInjection="disableInjection"
         @close="openTokenModal = false"
