@@ -33,22 +33,22 @@ export default function useTokenPricesQuery(
   const queryKey = reactive(QUERY_KEYS.Tokens.Prices(networkId, addresses));
   const { currency } = useUserSettings();
 
-  // TODO: kill this with fire as soon as Coingecko supports wstETH
-  async function injectSymmV2PriceOnCelo(prices: TokenPrices): Promise<TokenPrices> {
-// get SYMM price from v1 subgraph // todo: remove once symmv2 is supported
-console.log('SYMM PRICE');
-      const symm2address = '0x8427bd503dd3169ccc9aff7326c15258bc305478';
-      const url =
-        'https://api.thegraph.com/subgraphs/name/centfinance/symmetricv1celo';
-      const subgraphRes = await subgraphRequest(
-        url,
-        useSymmetricQueries['getSYMM2PriceCELO']
-      );
-      const symmPrice = subgraphRes?.tokenPrices[0].price;
-      console.log(symmPrice);
-      prices[symm2address] = {
-        [currency.value]: symmPrice
-      };
+  // TODO: kill this with fire as soon as Coingecko supports symmv2
+  async function injectSymmV2PriceOnCelo(
+    prices: TokenPrices
+  ): Promise<TokenPrices> {
+    // get SYMM price from v1 subgraph
+    const symm2address = '0x8427bD503dd3169cCC9aFF7326c15258Bc305478';
+    const url =
+      'https://api.thegraph.com/subgraphs/name/centfinance/symmetricv1celo';
+    const subgraphRes = await subgraphRequest(
+      url,
+      useSymmetricQueries['getSYMM2PriceCELO']
+    );
+    const symmPrice = subgraphRes?.tokenPrices[0].price;
+    prices[symm2address] = {
+      [currency.value]: Number((+symmPrice).toFixed(6))
+    };
     return prices;
   }
 
