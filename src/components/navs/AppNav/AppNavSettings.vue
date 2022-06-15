@@ -255,10 +255,10 @@ export default defineComponent({
             break;
           case Network.GNOSIS:
             color = 'purple';
-            break; 
+            break;
           case Network.CELO:
             color = 'green';
-            break; 
+            break;
           case Network.ROPSTEN:
             color = 'pink';
             break;

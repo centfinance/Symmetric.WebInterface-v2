@@ -143,16 +143,13 @@ function handleAddressChange(newAddress: string): void {
 }
 
 function tokenOptions(index: number): string[] {
-  console.log('WRAPPED NATIVE');
-  console.log(wrappedNativeAsset);
-  if(wrappedNativeAsset.value != undefined)
-  {
-if (tokenAddresses.value[index] === wrappedNativeAsset?.value.address)
-    return [wrappedNativeAsset.value.address, nativeAsset.address];
-  if (tokenAddresses.value[index] === nativeAsset.address)
-    return [nativeAsset.address, wrappedNativeAsset.value.address];
+  if (wrappedNativeAsset.value != undefined) {
+    if (tokenAddresses.value[index] === wrappedNativeAsset?.value.address)
+      return [wrappedNativeAsset.value.address, nativeAsset.address];
+    if (tokenAddresses.value[index] === nativeAsset.address)
+      return [nativeAsset.address, wrappedNativeAsset.value.address];
   }
-  
+
   return [];
 }
 
