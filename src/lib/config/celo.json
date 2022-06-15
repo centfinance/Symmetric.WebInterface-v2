@@ -20,7 +20,7 @@
     "supportsEIP1559": true,
     "nativeAsset": {
         "name": "Celo",
-        "address": "0x471EcE3750Da237f93B8E339c536989b8978a438",
+        "address": "",
         "symbol": "CELO",
         "decimals": 18,
         "deeplinkId": "celo",
@@ -40,7 +40,7 @@
       "weightedPoolFactory": "0x47B7bdA16AB8B617E976c83A2c3c8664944d8Ed2",
       "stablePoolFactory": "0x7dF194500b8b8dcFe6A0b8E412f8a166c89Bf255",
       "tokenFactory": "",
-      "weth": "0x471EcE3750Da237f93B8E339c536989b8978a438",
+      "weth": "",
       "stETH": "",
       "wstETH": "",
       "lidoRelayer": "",
