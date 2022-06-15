@@ -11,7 +11,8 @@ export enum Network {
   KOVAN = 42,
   POLYGON = 137,
   ARBITRUM = 42161,
-  CELO = 42220
+  CELO = 42220,
+  GNOSIS = 100
 }
 
 /**
@@ -28,6 +29,7 @@ export const isMainnet = networkId.value === Network.MAINNET;
 export const isPolygon = networkId.value === Network.POLYGON;
 export const isArbitrum = networkId.value === Network.ARBITRUM;
 export const isCelo = networkId.value === Network.CELO;
+export const isGnosis = networkId.value === Network.GNOSIS;
 
 /**
  * METHODS

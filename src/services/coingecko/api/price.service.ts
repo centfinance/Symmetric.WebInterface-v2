@@ -85,7 +85,13 @@ export class PriceService {
           addressesPerRequest * page,
           addressesPerRequest * (page + 1)
         );
-        const endpoint = `/simple/token_price/${this.platformId}?contract_addresses=${addressString}&vs_currencies=${this.fiatParam}`;
+        // TODO: Put a better fix in for this
+        let networkIdentity = this.platformId;
+        if (this.platformId == 'gnosis')
+        {
+          networkIdentity = 'xdai';
+        }
+        const endpoint = `/simple/token_price/${networkIdentity}?contract_addresses=${addressString}&vs_currencies=${this.fiatParam}`;
         const request = retryPromiseWithDelay(
           this.client.get<PriceResponse>(endpoint),
           3,

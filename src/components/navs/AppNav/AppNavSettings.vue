@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="p-4 border-b dark:border-gray-900">
-      <div class="flex justify-between items-center mb-4">
+      <div class="flex items-center justify-between mb-4">
         <h5 v-text="$t('account')" class="leading-none" />
         <div v-if="!hideDisconnect">
           <BalBtn outline color="gray" size="xs" @click="disconnectWallet">
@@ -21,10 +21,10 @@
             </div>
           </div>
           <div class="ml-2">
-            <div class="address flex items-baseline">
+            <div class="flex items-baseline address">
               <div v-if="name" v-text="name" />
               <div v-else v-text="_shorten(account)" />
-              <div class="ml-3 flex">
+              <div class="flex ml-3">
                 <BalTooltip width="auto">
                   <template v-slot:activator>
                     <BalBtn
@@ -64,12 +64,12 @@
       </div>
     </div>
     <div class="hidden px-4">
-      <span v-text="$t('language')" class="font-medium mb-2" />
+      <span v-text="$t('language')" class="mb-2 font-medium" />
       <div class="flex mt-1">
         <div
           v-for="(locale, localeKey) in locales"
           :key="localeKey"
-          class="option w-16 mr-2 py-1 text-center border rounded-xl cursor-pointer"
+          class="w-16 py-1 mr-2 text-center border cursor-pointer option rounded-xl"
           :class="{ active: appLocale === localeKey }"
           @click="setLocale(localeKey)"
         >
@@ -78,7 +78,7 @@
       </div>
     </div>
     <div class="hidden px-4 mt-4">
-      <span v-text="$t('theme')" class="font-medium mb-2" />
+      <span v-text="$t('theme')" class="mb-2 font-medium" />
       <div class="flex mt-1">
         <div
           class="option w-16 mr-2 py-1.5 flex items-center justify-center border rounded-xl cursor-pointer"
@@ -98,10 +98,10 @@
     </div>
     <div class="px-4 mt-4">
       <div class="flex items-baseline">
-        <span v-text="$t('slippageTolerance')" class="font-medium mb-2" />
+        <span v-text="$t('slippageTolerance')" class="mb-2 font-medium" />
         <BalTooltip>
           <template v-slot:activator>
-            <BalIcon name="info" size="xs" class="ml-1 text-gray-400 -mb-px" />
+            <BalIcon name="info" size="xs" class="ml-1 -mb-px text-gray-400" />
           </template>
           <div v-html="$t('marketConditionsWarning')" />
         </BalTooltip>
@@ -110,10 +110,10 @@
     </div>
     <div v-if="!hideLiquidity" class="px-4 mt-6">
       <div class="flex items-baseline">
-        <span v-text="$t('tradeLiquidity')" class="font-medium mb-2" />
+        <span v-text="$t('tradeLiquidity')" class="mb-2 font-medium" />
         <BalTooltip>
           <template v-slot:activator>
-            <BalIcon name="info" size="xs" class="ml-1 text-gray-400 -mb-px" />
+            <BalIcon name="info" size="xs" class="ml-1 -mb-px text-gray-400" />
           </template>
           <div v-text="$t('whichPools')" />
         </BalTooltip>
@@ -126,10 +126,10 @@
     </div>
     <div v-if="isEIP1559SupportedNetwork" class="px-4 mt-6">
       <div class="flex items-baseline">
-        <span v-text="$t('transactionType')" class="font-medium mb-2" />
+        <span v-text="$t('transactionType')" class="mb-2 font-medium" />
         <BalTooltip>
           <template v-slot:activator>
-            <BalIcon name="info" size="xs" class="ml-1 text-gray-400 -mb-px" />
+            <BalIcon name="info" size="xs" class="ml-1 -mb-px text-gray-400" />
           </template>
           <div v-text="$t('ethereumTxTypeTooltip')" />
         </BalTooltip>
@@ -145,10 +145,10 @@
       class="px-4 mt-6"
     >
       <div class="flex items-baseline">
-        <span v-text="$t('tradeInterface')" class="font-medium mb-2" />
+        <span v-text="$t('tradeInterface')" class="mb-2 font-medium" />
         <BalTooltip>
           <template v-slot:activator>
-            <BalIcon name="info" size="xs" class="ml-1 text-gray-400 -mb-px" />
+            <BalIcon name="info" size="xs" class="ml-1 -mb-px text-gray-400" />
           </template>
           <div v-text="$t('tradeInterfaceTooltip')" class="w-52" />
         </BalTooltip>
@@ -161,7 +161,7 @@
       <div class="flex mt-1"></div>
     </div>
     <div
-      class="network p-4 mt-4 text-sm border-t dark:border-gray-900 rounded-b-xl"
+      class="p-4 mt-4 text-sm border-t network dark:border-gray-900 rounded-b-xl"
     >
       <div v-text="$t('network')" />
       <div class="flex items-baseline">
@@ -253,6 +253,12 @@ export default defineComponent({
           case Network.KOVAN:
             color = 'purple';
             break;
+          case Network.GNOSIS:
+            color = 'purple';
+            break; 
+          case Network.CELO:
+            color = 'green';
+            break; 
           case Network.ROPSTEN:
             color = 'pink';
             break;

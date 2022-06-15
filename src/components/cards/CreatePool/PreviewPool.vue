@@ -70,11 +70,14 @@ const initialWeightLabel = computed(() => t('initialWeight'));
 
 const tokenAddresses = computed((): string[] => {
   return seedTokens.value.map(token => {
-    if (
+    if(wrappedNativeAsset.value != undefined)
+    {
+if (
       token.tokenAddress == wrappedNativeAsset.value.address &&
       useNativeAsset.value
     ) {
       return nativeAsset.address;
+    }
     }
     return token.tokenAddress;
   });

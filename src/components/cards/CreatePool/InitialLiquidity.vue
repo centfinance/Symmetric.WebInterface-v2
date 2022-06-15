@@ -143,10 +143,16 @@ function handleAddressChange(newAddress: string): void {
 }
 
 function tokenOptions(index: number): string[] {
-  if (tokenAddresses.value[index] === wrappedNativeAsset.value.address)
+  console.log('WRAPPED NATIVE');
+  console.log(wrappedNativeAsset);
+  if(wrappedNativeAsset.value != undefined)
+  {
+if (tokenAddresses.value[index] === wrappedNativeAsset?.value.address)
     return [wrappedNativeAsset.value.address, nativeAsset.address];
   if (tokenAddresses.value[index] === nativeAsset.address)
     return [nativeAsset.address, wrappedNativeAsset.value.address];
+  }
+  
   return [];
 }
 
@@ -193,7 +199,7 @@ function onAlertMountChange() {
           <BalStack horizontal spacing="xs" align="center">
             <button
               @click="goBack"
-              class="text-blue-500 hover:text-blue-700 flex"
+              class="flex text-blue-500 hover:text-blue-700"
             >
               <BalIcon class="flex" name="chevron-left" />
             </button>
@@ -205,10 +211,10 @@ function onAlertMountChange() {
               horizontal
               align="center"
               spacing="sm"
-              class="border rounded-lg p-2 mt-2"
+              class="p-2 mt-2 border rounded-lg"
             >
               <BalIcon name="zap" size="sm" class="mt-1 text-gray-500" />
-              <span class="dark:text-gray-400 font-medium">
+              <span class="font-medium dark:text-gray-400">
                 {{ t('optimizedPrefilled') }}
               </span>
               <button
@@ -236,7 +242,7 @@ function onAlertMountChange() {
         </BalStack>
         <BalStack horizontal spacing="sm" align="center">
           <div>
-            <span class="text-sm pl-2">{{
+            <span class="pl-2 text-sm">{{
               t('autoOptimiseLiquidityToggle.label')
             }}</span>
             <BalTooltip width="64">
@@ -244,7 +250,7 @@ function onAlertMountChange() {
                 <BalIcon
                   name="info"
                   size="xs"
-                  class="text-gray-400 ml-1 flex"
+                  class="flex ml-1 text-gray-400"
                 />
               </template>
               <div v-html="t('autoOptimiseLiquidityToggle.tooltip')" />
@@ -291,7 +297,7 @@ function onAlertMountChange() {
               >
                 <button
                   @click="optimiseLiquidity(true)"
-                  class="bg-clip-text text-sm text-transparent font-medium bg-gradient-to-tr from-blue-500 to-pink-500  hover:from-blue-800 hover:to-pink-800"
+                  class="text-sm font-medium text-transparent bg-clip-text bg-gradient-to-tr from-blue-500 to-pink-500 hover:from-blue-800 hover:to-pink-800"
                 >
                   {{ t('optimize') }}
                 </button>

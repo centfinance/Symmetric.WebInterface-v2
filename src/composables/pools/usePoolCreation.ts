@@ -454,12 +454,16 @@ export default function usePoolCreation() {
     try {
       const tokenAddresses: string[] = poolCreationState.seedTokens.map(
         (token: PoolSeedToken) => {
-          if (
+          if(wrappedNativeAsset.value != undefined)
+          {
+            if (
             token.tokenAddress === wrappedNativeAsset.value.address &&
             poolCreationState.useNativeAsset
           ) {
             return nativeAsset.address;
           }
+          }
+          
           return token.tokenAddress;
         }
       );
