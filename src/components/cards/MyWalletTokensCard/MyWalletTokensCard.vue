@@ -56,7 +56,10 @@ const tokenAddresses = computed((): string[] => {
 const tokensForTotal = computed((): string[] => {
   if (pageContext.value === 'invest' && props.useNativeAsset) {
     return tokenAddresses.value.map(address => {
-      if (wrappedNativeAsset.value != undefined && address === wrappedNativeAsset.value.address)
+      if (
+        wrappedNativeAsset.value != undefined &&
+        address === wrappedNativeAsset.value.address
+      )
         return nativeAsset.address;
       return address;
     });
@@ -73,7 +76,8 @@ const fiatTotal = computed(() => {
       if (pageContext.value === 'invest') {
         if (address === nativeAsset.address && !props.useNativeAsset)
           return '0';
-        if (wrappedNativeAsset.value != undefined && 
+        if (
+          wrappedNativeAsset.value != undefined &&
           address === wrappedNativeAsset.value.address &&
           props.useNativeAsset
         )
@@ -99,7 +103,11 @@ function isSelectedNativeAsset(address: string): boolean {
   if (pageContext.value === 'withdraw') return true;
   if (props.useNativeAsset && address === nativeAsset.address) return true;
 
-  return !props.useNativeAsset && (wrappedNativeAsset.value != undefined && address === wrappedNativeAsset.value.address);
+  return (
+    !props.useNativeAsset &&
+    wrappedNativeAsset.value != undefined &&
+    address === wrappedNativeAsset.value.address
+  );
 }
 </script>
 
@@ -115,7 +123,7 @@ function isSelectedNativeAsset(address: string): boolean {
 
     <div class="p-4 -mt-2">
       <div v-for="address in tokenAddresses" :key="address" class="py-2">
-        <div v-if="address === wrappedNativeAsset.address">
+        <div v-if="wrappedNativeAsset != undefined && address === wrappedNativeAsset.address">
           <div class="flex items-start justify-between">
             <BalBreakdown
               :items="[nativeAsset, wrappedNativeAsset]"

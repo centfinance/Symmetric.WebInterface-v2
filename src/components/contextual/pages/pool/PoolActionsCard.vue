@@ -39,7 +39,10 @@ const fiatTotal = computed(() => {
     .map(address => {
       let tokenBalance = '0';
 
-      if (wrappedNativeAsset.value != undefined && address === wrappedNativeAsset.value.address) {
+      if (
+        wrappedNativeAsset.value != undefined &&
+        address === wrappedNativeAsset.value.address
+      ) {
         const wrappedBalance = balanceFor(address);
         const nativeBalance = balanceFor(nativeAsset.address);
         tokenBalance = bnum(nativeBalance).gt(wrappedBalance)
