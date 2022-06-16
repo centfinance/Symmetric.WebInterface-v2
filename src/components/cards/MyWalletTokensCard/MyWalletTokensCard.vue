@@ -56,7 +56,7 @@ const tokenAddresses = computed((): string[] => {
 const tokensForTotal = computed((): string[] => {
   if (pageContext.value === 'invest' && props.useNativeAsset) {
     return tokenAddresses.value.map(address => {
-      if (address === wrappedNativeAsset.value.address)
+      if (wrappedNativeAsset.value != undefined && address === wrappedNativeAsset.value.address)
         return nativeAsset.address;
       return address;
     });
@@ -73,7 +73,7 @@ const fiatTotal = computed(() => {
       if (pageContext.value === 'invest') {
         if (address === nativeAsset.address && !props.useNativeAsset)
           return '0';
-        if (
+        if (wrappedNativeAsset.value != undefined && 
           address === wrappedNativeAsset.value.address &&
           props.useNativeAsset
         )
@@ -99,21 +99,21 @@ function isSelectedNativeAsset(address: string): boolean {
   if (pageContext.value === 'withdraw') return true;
   if (props.useNativeAsset && address === nativeAsset.address) return true;
 
-  return !props.useNativeAsset && address === wrappedNativeAsset.value.address;
+  return !props.useNativeAsset && (wrappedNativeAsset.value != undefined && address === wrappedNativeAsset.value.address);
 }
 </script>
 
 <template>
   <BalCard shadow="none" noPad>
     <template v-if="!hideHeader" #header>
-      <div class="p-4 w-full border-b dark:border-gray-900">
+      <div class="w-full p-4 border-b dark:border-gray-900">
         <h6>
           {{ $t('poolTransfer.myWalletTokensCard.title') }}
         </h6>
       </div>
     </template>
 
-    <div class="-mt-2 p-4">
+    <div class="p-4 -mt-2">
       <div v-for="address in tokenAddresses" :key="address" class="py-2">
         <div v-if="address === wrappedNativeAsset.address">
           <div class="flex items-start justify-between">
@@ -156,7 +156,7 @@ function isSelectedNativeAsset(address: string): boolean {
 
         <AssetRow v-else :address="address" :selected="true" />
       </div>
-      <div class="pt-4 flex justify-between font-medium">
+      <div class="flex justify-between pt-4 font-medium">
         <span>
           {{ $t('total') }}
         </span>
