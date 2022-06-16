@@ -123,7 +123,12 @@ function isSelectedNativeAsset(address: string): boolean {
 
     <div class="p-4 -mt-2">
       <div v-for="address in tokenAddresses" :key="address" class="py-2">
-        <div v-if="wrappedNativeAsset != undefined && address === wrappedNativeAsset.address">
+        <div
+          v-if="
+            wrappedNativeAsset != undefined &&
+              address === wrappedNativeAsset.address
+          "
+        >
           <div class="flex items-start justify-between">
             <BalBreakdown
               :items="[nativeAsset, wrappedNativeAsset]"

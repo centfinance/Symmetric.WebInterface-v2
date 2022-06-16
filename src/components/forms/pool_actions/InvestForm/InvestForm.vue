@@ -145,7 +145,8 @@ function hint(index: number): string {
 }
 
 function tokenOptions(index: number): string[] {
-  return wrappedNativeAsset.value != undefined && props.pool.tokenAddresses[index] === wrappedNativeAsset.value.address
+  return wrappedNativeAsset.value != undefined &&
+    props.pool.tokenAddresses[index] === wrappedNativeAsset.value.address
     ? [wrappedNativeAsset.value.address, nativeAsset.address]
     : [];
 }
