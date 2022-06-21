@@ -65,6 +65,7 @@ const {
   isKovan,
   isPolygon,
   isCelo,
+  isGnosis,
   isMismatchedNetwork
 } = useWeb3();
 const { txListener } = useEthers();
@@ -280,10 +281,10 @@ async function claimAvailableRewards() {
       </BalBtn>
     </template>
     <div class="w-80 sm:w-96" v-if="userClaims != null">
-      <h5 class="text-lg mb-3 px-3 pt-3">
+      <h5 class="px-3 pt-3 mb-3 text-lg">
         {{ $t('liquidityMiningPopover.title') }}
       </h5>
-      <div class="text-sm text-gray-600 mb-1 px-3" v-if="isAirdrop">
+      <div class="px-3 mb-1 text-sm text-gray-600" v-if="isAirdrop">
         {{ $t('liquidityMiningPopover.airdropExplainer', ['Polygon']) }}
       </div>
       <div v-if="!isAirdrop" class="px-3">
@@ -295,7 +296,7 @@ async function claimAvailableRewards() {
               <BalTabs
                 v-model="activeTab"
                 :tabs="tabs"
-                class="whitespace-nowrap p-0 m-0"
+                class="p-0 m-0 whitespace-nowrap"
                 no-pad
               />
             </div>
@@ -306,7 +307,7 @@ async function claimAvailableRewards() {
               :key="`token-${claimableToken.token}`"
             >
               <div
-                class="px-3 py-2 flex items-center mb-2 border-b dark:border-gray-900 last:border-0"
+                class="flex items-center px-3 py-2 mb-2 border-b dark:border-gray-900 last:border-0"
               >
                 <BalAsset
                   :address="claimableToken.token"
@@ -318,7 +319,7 @@ async function claimAvailableRewards() {
                     {{ fNum(claimableToken.amount, 'token') }}
                     {{ claimableToken.symbol }}
                   </div>
-                  <div class="font-sm text-gray-400">
+                  <div class="text-gray-400 font-sm">
                     {{ fNum(claimableToken.fiatValue, 'usd') }}
                   </div>
                 </div>
@@ -331,7 +332,7 @@ async function claimAvailableRewards() {
               :key="`token-${claimableToken.token}`"
             >
               <div
-                class="px-3 py-2 flex items-center mb-2 border-b dark:border-gray-900 last:border-0"
+                class="flex items-center px-3 py-2 mb-2 border-b dark:border-gray-900 last:border-0"
               >
                 <BalAsset
                   :address="claimableToken.token"
@@ -343,7 +344,7 @@ async function claimAvailableRewards() {
                     {{ fNum(claimableToken.amount, 'token') }}
                     {{ claimableToken.symbol }}
                   </div>
-                  <div class="font-sm text-gray-400">
+                  <div class="text-gray-400 font-sm">
                     {{ fNum(claimableToken.fiatValue, 'usd') }}
                   </div>
                 </div>
@@ -381,15 +382,15 @@ async function claimAvailableRewards() {
       <div v-if="!isAirdrop" class="text-sm">
         <div
           v-if="!hasClaimableTokens && !hasCurrentEstimateClaimableTokens"
-          class="mb-4 px-3"
+          class="px-3 mb-4"
         >
-          <div class="font-semibold mb-1">
+          <div class="mb-1 font-semibold">
             {{ $t('liquidityMiningPopover.noRewards.title') }}
           </div>
           <div>{{ $t('liquidityMiningPopover.noRewards.description') }}</div>
         </div>
-        <div class="mb-4 px-3">
-          <div class="font-semibold mb-2">
+        <div class="px-3 mb-4">
+          <div class="mb-2 font-semibold">
             Looking for other claimable tokens?
           </div>
           <ul class="pl-8 list-disc">
@@ -441,7 +442,7 @@ async function claimAvailableRewards() {
             </li>
           </ul>
         </div>
-        <div class="pt-3 border-t p-3 border-gray-200 dark:border-gray-700">
+        <div class="p-3 pt-3 border-t border-gray-200 dark:border-gray-700">
           View this week's<router-link
             :to="{ name: 'liquidity-mining' }"
             class="text-blue-500 hover:underline"
@@ -450,7 +451,7 @@ async function claimAvailableRewards() {
           </router-link>
         </div>
       </div>
-      <div v-else class="mt-4 text-sm px-3 pb-3">
+      <div v-else class="px-3 pb-3 mt-4 text-sm">
         <div>{{ $t('liquidityMiningPopover.airdropEligibility') }}</div>
       </div>
     </div>

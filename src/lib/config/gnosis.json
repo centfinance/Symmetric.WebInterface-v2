@@ -1,0 +1,69 @@
+{
+  "key": "100",
+  "chainId": 100,
+  "chainName": "Gnosis",
+  "name": "Gnosis Mainnet",
+  "shortName": "Gnosis",
+  "network": "gnosis",
+  "unknown": false,
+  "rpc": "https://damp-black-dawn.xdai.quiknode.pro/01e1836b90fe8480ab14353cef700b0aec6ca85e/",
+  "ws": "wss://damp-black-dawn.xdai.quiknode.pro/01e1836b90fe8480ab14353cef700b0aec6ca85e/",
+  "loggingRpc": "https://damp-black-dawn.xdai.quiknode.pro/01e1836b90fe8480ab14353cef700b0aec6ca85e/",
+  "explorer": "https://blockscout.com/xdai/mainnet/",
+  "explorerName": "Blockscout",
+  "subgraph": "https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-gnosis",
+  "poolsUrlV1": "",
+  "poolsUrlV2": "",
+  "subgraphs": {
+    "aave": ""
+  },
+  "supportsEIP1559": true,
+  "nativeAsset": {
+      "name": "Xdai",
+      "address": "",
+      "symbol": "XDAI",
+      "decimals": 18,
+      "deeplinkId": "xdai",
+      "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/xdai/assets/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d/logo.png",
+      "minTransactionBuffer": "0.05"
+    },
+  "addresses": {
+    "bFactory": "",
+    "bActions": "",
+    "dsProxyRegistry": "",
+    "exchangeProxy": "",
+    "merkleRedeem": "",
+    "merkleOrchard": "",
+    "multicall": "0xFAa296891cA6CECAF2D86eF5F7590316d0A17dA0",
+    "authorizer": "0xAb758532D05d2A2fc7b2853ebe54Ac17fE17Ea7f",
+    "vault": "0x24F87b37F4F249Da61D89c3FF776a55c321B2773",
+    "weightedPoolFactory": "0xb13A501fA658389e437E3047d56F2Bf945207a5A",
+    "stablePoolFactory": "0xF9e6BE5A015Da5dc29B42ff345bB7Dd1b6C60aC7",
+    "tokenFactory": "",
+    "weth": "",
+    "stETH": "",
+    "wstETH": "",
+    "lidoRelayer": "",
+    "balancerHelpers": "0xe007Ba1c5665567175B4d462f8dba14506e7f592",
+    "batchRelayer": "0xDCE2ea355530c098f5B9410b6B2663E0FFf246Bf"
+  },
+  "keys": {
+    "infura": "daaa68ec242643719749dd1caba2fc66",
+    "alchemy": "oGLgncMVHNWltnK0nTfiryxQ6gYemKQO"
+  },
+  "strategies": {
+    "0": {
+      "type": "0",
+      "name": "stablePool"
+    },
+    "1": {
+      "type": "1",
+      "name": "weightedPool"
+    },
+    "2": {
+      "type": "2",
+      "name": "weightedPool"
+    }
+  },
+  "supportsElementPools": true
+}

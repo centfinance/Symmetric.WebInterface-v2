@@ -39,7 +39,10 @@ const fiatTotal = computed(() => {
     .map(address => {
       let tokenBalance = '0';
 
-      if (address === wrappedNativeAsset.value.address) {
+      if (
+        wrappedNativeAsset.value != undefined &&
+        address === wrappedNativeAsset.value.address
+      ) {
         const wrappedBalance = balanceFor(address);
         const nativeBalance = balanceFor(nativeAsset.address);
         tokenBalance = bnum(nativeBalance).gt(wrappedBalance)
@@ -63,10 +66,10 @@ const fiatTotal = computed(() => {
 
 <template>
   <BalCard>
-    <div class="text-gray-500 text-sm">
+    <div class="text-sm text-gray-500">
       {{ $t('basedOnTokensInWallet') }}
     </div>
-    <div class="flex justify-between items-center mb-4">
+    <div class="flex items-center justify-between mb-4">
       <h5>
         {{ $t('youCanInvest') }}
       </h5>
@@ -82,7 +85,7 @@ const fiatTotal = computed(() => {
       block
       @click="toggleWalletSelectModal"
     />
-    <div v-else class="grid gap-2 grid-cols-2">
+    <div v-else class="grid grid-cols-2 gap-2">
       <BalBtn
         tag="router-link"
         :to="{ name: 'invest' }"

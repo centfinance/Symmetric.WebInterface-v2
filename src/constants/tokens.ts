@@ -27,6 +27,10 @@ export const TOKENS = {
     '42220': {
       WETH: '0x5d6b088DadD5DA64B7CDBE44340f0dD72364d7a1',
       BAL: '0x8427bD503dd3169cCC9aFF7326c15258Bc305478' // SYMM v2 on celo
+    },
+    '100': {
+      WETH: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
+      BAL: '0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84' // SYMM on Gnosis
     }
   },
   Prices: {

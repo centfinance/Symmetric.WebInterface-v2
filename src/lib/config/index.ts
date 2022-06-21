@@ -6,6 +6,7 @@ import arbitrum from './arbitrum.json';
 import docker from './docker.json';
 import test from './test.json';
 import celo from './celo.json';
+import gnosis from './gnosis.json';
 import { Network } from '@/composables/useNetwork';
 
 export interface Config {
@@ -75,6 +76,7 @@ const config: Record<Config['chainId'], Config> = {
   [Network.POLYGON]: polygon,
   [Network.ARBITRUM]: arbitrum,
   [Network.CELO]: celo,
+  [Network.GNOSIS]: gnosis,
   12345: test,
   // @ts-ignore
   17: docker

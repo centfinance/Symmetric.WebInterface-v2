@@ -17,9 +17,9 @@
         <BalIcon name="chevron-down" size="sm" class="ml-2" />
       </BalBtn>
     </template>
-    <div class="flex flex-col w-44 rounded-lg overflow-hidden">
+    <div class="flex flex-col overflow-hidden rounded-lg w-44">
       <div
-        class="p-3 border-b dark:border-gray-900 whitespace-nowrap text-gray-500 font-medium"
+        class="p-3 font-medium text-gray-500 border-b dark:border-gray-900 whitespace-nowrap"
       >
         Select a network
       </div>
@@ -33,7 +33,7 @@
           <img
             :src="iconSrc(network)"
             :alt="network.name"
-            class="w-5 h-5 rounded-full mr-2"
+            class="w-5 h-5 mr-2 rounded-full"
           />
           <span class="ml-1 font-medium">
             {{ network.name }}
@@ -74,6 +74,12 @@ export default defineComponent({
         name: 'Celo',
         subdomain: 'celo',
         key: '42220'
+      },
+      {
+        id: 'gnosis',
+        name: 'Gnosis',
+        subdomain: 'gnosis',
+        key: '100'
       }
     ];
 
@@ -92,7 +98,7 @@ export default defineComponent({
     }
 
     function appUrl(network: Network): string {
-      return `https://${network.subdomain}.symmetric.exchange`;
+      return `https://${network.subdomain}.symm.fi`;
     }
 
     function isActive(network: Network): boolean {

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="lm-banner h-48 flex items-center justify-center flex-col">
-      <span class="text-white font-semibold"
+    <div class="flex flex-col items-center justify-center h-48 lm-banner">
+      <span class="font-semibold text-white"
         >Week {{ currentWeek }} Liquidity mining incentives</span
       >
-      <h1 class="font-body mt-2 text-white font-semi bold">
+      <h1 class="mt-2 text-white font-body font-semi bold">
         ~{{ fNum(currentWeekTotalFiat, 'usd') }}
       </h1>
     </div>
-    <div class="lg:container lg:mx-auto pt-10 md:pt-12">
+    <div class="pt-10 lg:container lg:mx-auto md:pt-12">
       <div class="px-4">
         <h3 class="mb-1">Liquidity mining on {{ shortNetworkName }}</h3>
         <span class="text-black-600">{{ description }}</span>
@@ -23,7 +23,7 @@
       </div>
       <div class="px-4">
         <div class="flex flex-col">
-          <span class="font-medium mb-1 mt-8"
+          <span class="mt-8 mb-1 font-medium"
             >Liquidity Mining is also on {{ otherNetwork }}</span
           >
 
@@ -36,7 +36,7 @@
             </a>
           </BalLink>
         </div>
-        <div class="mt-12 max-w-6xl">
+        <div class="max-w-6xl mt-12">
           <h4 class="font-bold">About liquidity mining</h4>
           <p class="mt-2">
             Many DeFi protocols distribute tokens to users who perform certain
@@ -54,7 +54,7 @@
           </p>
           <div class="mt-6">
             <h5>Liquidity mining details</h5>
-            <ul class="mt-2 pl-8 list-disc">
+            <ul class="pl-8 mt-2 list-disc">
               <li class="mt-2">
                 You’re eligible to receive token distributions if you add
                 liquidity to any of the eligible pools.
@@ -192,6 +192,9 @@ export default defineComponent({
       if (networkConfig.chainId === Network.CELO) {
         return 'Celo';
       }
+      if (networkConfig.chainId === Network.GNOSIS) {
+        return 'Gnosis';
+      }
       return 'Unknown Network';
     });
 
@@ -210,6 +213,10 @@ export default defineComponent({
       }
       if (networkConfig.chainId === Network.CELO) {
         return `SYMM distributions on Celo can be claimed weekly by tapping the
+        liquidity mining claim tool in the header.`;
+      }
+      if (networkConfig.chainId === Network.GNOSIS) {
+        return `SYMM distributions on Gnosis can be claimed weekly by tapping the
         liquidity mining claim tool in the header.`;
       }
       return '';

@@ -54,7 +54,8 @@ export default defineComponent({
       isKovan,
       isPolygon,
       isArbitrum,
-      isCelo
+      isCelo,
+      isGnosis
     } = useWeb3();
 
     // COMPUTED
@@ -64,7 +65,8 @@ export default defineComponent({
         isPolygon.value ||
         isArbitrum.value ||
         isKovan.value ||
-        isCelo.value
+        isCelo.value ||
+        isGnosis.value
     );
 
     // METHODS
