@@ -14,7 +14,7 @@
             {{ $t('cardOneText') }}
           </p>
           <template v-slot:footer>
-            <BalLink :href="EXTERNAL_LINKS.Element.Earn" external>
+            <BalLink :href="EXTERNAL_LINKS.Symmetric.Medium" external>
               <span>{{ $t('viewAndReadMoreCard1') }}</span>
               <BalIcon name="arrow-up-right" size="sm" class="ml-1" />
             </BalLink>
