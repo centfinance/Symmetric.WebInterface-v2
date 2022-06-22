@@ -1,14 +1,14 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
     <template v-if="loading">
       <BalLoadingBlock v-for="n in 4" :key="n" class="h-24" />
     </template>
     <template v-else>
       <BalCard v-for="(stat, i) in stats" :key="i">
-        <div class="text-sm text-gray-500 font-medium mb-2">
+        <div class="mb-2 text-sm font-medium text-gray-500">
           {{ stat.label }}
         </div>
-        <div class="text-xl font-medium truncate flex items-center">
+        <div class="flex items-center text-xl font-medium truncate">
           {{ stat.value }}
           <LiquidityAPRTooltip :pool="pool" v-if="stat.id === 'apr'" />
         </div>
@@ -65,7 +65,7 @@ export default defineComponent({
         },
         {
           id: 'apr',
-          label: 'APR',
+          label: 'SWAP APR',
           value:
             Number(props.pool.dynamic.apr.total) > APR_THRESHOLD
               ? '-'
