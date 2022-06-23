@@ -26,6 +26,23 @@
       <div class="mb-16" />
     </template>
 
+    <div v-if="indexPools.length > 0">
+      <div class="px-4 lg:px-0">
+        <h3 class="mb-3">Index pools</h3>
+      </div>
+
+      <PoolsTable
+        :isLoading="isLoadingPools"
+        :data="indexPools"
+        :noPoolsLabel="$t('noPoolsFound')"
+        :isPaginated="false"
+        :isLoadingMore="false"
+        @loadMore="loadMorePools"
+        :selectedTokens="selectedTokens"
+        class="mb-8"
+      />
+    </div>
+
     <div class="px-4 lg:px-0">
       <h3 class="mb-3">{{ $t('investmentPools') }}</h3>
       <div
@@ -121,6 +138,8 @@ export default defineComponent({
     } = usePools(selectedTokens);
     const { addAlert, removeAlert } = useAlerts();
     const { upToMediumBreakpoint } = useBreakpoints();
+    const smumIndexPool =
+      '0xa287a3722c367849efa5c76e96be36efd65c290e000100000000000000000020';
 
     // COMPUTED
     const filteredPools = computed(() =>
@@ -130,8 +149,19 @@ export default defineComponent({
               pool.tokenAddresses.includes(selectedToken)
             );
           })
-        : pools?.value
+        : pools?.value?.filter(pool => pool.id !== smumIndexPool)
     );
+
+    const indexPools = computed(() => {
+      return selectedTokens.value.length > 0
+        ? pools.value?.filter(pool => {
+            if (pool.id !== smumIndexPool) return false;
+            return selectedTokens.value.every((selectedToken: string) =>
+              pool.tokenAddresses.includes(selectedToken)
+            );
+          })
+        : pools?.value?.filter(pool => pool.id === smumIndexPool);
+    });
 
     const hideV1Links = computed(() => !isV1Supported);
 
@@ -161,6 +191,7 @@ export default defineComponent({
     return {
       // data
       filteredPools,
+      indexPools,
       userPools,
       isLoadingPools,
       isLoadingUserPools,
