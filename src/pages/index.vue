@@ -26,6 +26,11 @@
       <div class="mb-16" />
     </template>
 
+    <div class="flex items-center justify-center mb-5">
+      <h5 class="mr-3">Total Liquidity:</h5>
+      <h4>${{ getTotalLiquidity }}</h4>
+    </div>
+
     <div v-if="indexPools.length > 0">
       <div class="px-4 lg:px-0">
         <h3 class="mb-3">Index pools</h3>
@@ -163,6 +168,24 @@ export default defineComponent({
         : pools?.value?.filter(pool => pool.id === smumIndexPool);
     });
 
+    const getTotalLiquidity = computed(() => {
+      const filtered =
+        selectedTokens.value.length > 0
+          ? pools.value?.filter(pool => {
+              return selectedTokens.value.every((selectedToken: string) =>
+                pool.tokenAddresses.includes(selectedToken)
+              );
+            })
+          : pools?.value;
+
+      const tvl = filtered.reduce(
+        (previous, current) => (previous += +current.totalLiquidity),
+        0
+      );
+
+      return tvl.toFixed(2);
+    });
+
     const hideV1Links = computed(() => !isV1Supported);
 
     watch(poolsQuery.error, () => {
@@ -195,6 +218,7 @@ export default defineComponent({
       userPools,
       isLoadingPools,
       isLoadingUserPools,
+      getTotalLiquidity,
 
       // computed
       isWalletReady,
