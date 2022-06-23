@@ -115,7 +115,7 @@ export default function useTokenPricesQuery(
         prices['0x00Be915B9dCf56a3CBE739D9B9c202ca692409EC'][currency.value] ||
         0;
 
-      const symm2address = '0xa287a3722c367849efa5c76e96be36efd65c290e';
+      const symm2address = '0xA287A3722c367849eFA5c76e96BE36efd65C290e';
       const url =
         'https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-celo';
       const subgraphRes = await subgraphRequest(
