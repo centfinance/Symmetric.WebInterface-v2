@@ -211,7 +211,7 @@
     "highGasFees":"Frais d'essence élevés? Voici un coup de main",
     "highPriceImpact":"Impact élevé sur les prix",
     "highPriceImpactDetailed":"Ce commerce modifie considérablement le prix du marché.",
-    "highRiskPool":"Il s'agit d'un pool à risque plus élevé qui contient un ou plusieurs jetons non répertoriés. Un pool de liquidités est aussi bon que son jeton le plus faible ! Si un jeton était mis sur liste noire, frappé à l'infini, gelé ou exploité de toute autre manière, la valeur de ce pool pourrait passer à 0. Balancer Labs n'est jamais responsable des pertes subies lors de l'utilisation de notre interface utilisateur ou du protocole Balancer. Soyez prudent et faites vos propres recherches !",
+    "highRiskPool":"Il s'agit d'un pool à risque plus élevé qui contient un ou plusieurs jetons non répertoriés. Un pool de liquidités est aussi bon que son jeton le plus faible ! Si un jeton était mis sur liste noire, frappé à l'infini, gelé ou exploité de toute autre manière, la valeur de ce pool pourrait passer à 0. Symmetric n'est jamais responsable des pertes subies lors de l'utilisation de notre interface utilisateur ou du protocole Balancer. Soyez prudent et faites vos propres recherches !",
     "home":"Accueil",
     "hourAbbrev":"h",
     "inYourWallet":"Dans votre portefeuille:",

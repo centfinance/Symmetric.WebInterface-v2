@@ -211,7 +211,7 @@
     "highGasFees":"¿Altas tarifas de gas? Aquí tienes una mano de ayuda",
     "highPriceImpact":"Alto impacto en los precios",
     "highPriceImpactDetailed":"Este comercio está moviendo significativamente el precio de mercado.",
-    "highRiskPool":"Este es un pool de mayor riesgo que contiene uno o más tokens no listados. ¡Un fondo de liquidez es tan bueno como su token más débil! Si un token se incluye en la lista negra, se acuña infinitamente, se congela o se explota de cualquier otra manera, el valor de este pool podría llegar a 0. Balancer Labs nunca se hace responsable de las pérdidas incurridas a través del uso de nuestra interfaz de usuario o el protocolo Balancer. ¡Ten cuidado y haz tu propia investigación!",
+    "highRiskPool":"Este es un pool de mayor riesgo que contiene uno o más tokens no listados. ¡Un fondo de liquidez es tan bueno como su token más débil! Si un token se incluye en la lista negra, se acuña infinitamente, se congela o se explota de cualquier otra manera, el valor de este pool podría llegar a 0. Symmetric nunca se hace responsable de las pérdidas incurridas a través del uso de nuestra interfaz de usuario o el protocolo Balancer. ¡Ten cuidado y haz tu propia investigación!",
     "home":"Home",
     "hourAbbrev":"h",
     "inYourWallet":"En tu billetera:",
