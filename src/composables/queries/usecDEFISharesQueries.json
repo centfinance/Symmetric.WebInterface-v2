@@ -1,0 +1,16 @@
+{
+  "custom": {},
+  "getCDEFISharesCELO": {
+    "pools": {
+      "__args": {
+        "where": {
+          "id": "0xa287a3722c367849efa5c76e96be36efd65c290e000100000000000000000020"
+        }
+      },
+      "id": true,
+      "symbol": true,
+      "name": true,
+      "totalShares": true
+    }
+  }
+}
