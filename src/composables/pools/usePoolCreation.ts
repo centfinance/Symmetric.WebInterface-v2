@@ -77,7 +77,7 @@ export default function usePoolCreation() {
     wrappedNativeAsset,
     injectedTokens
   } = useTokens();
-  const { account, getProvider } = useWeb3();
+  const { account, getProvider,isCelo, isGnosis } = useWeb3();
   const { txListener } = useEthers();
   const { addTransaction } = useTransactions();
   const { t } = useI18n();
@@ -198,7 +198,6 @@ export default function usePoolCreation() {
     }
     return sum;
   });
-
   const poolTypeString = computed((): string => {
     switch (poolCreationState.type) {
       case PoolType.Weighted:
@@ -248,7 +247,8 @@ export default function usePoolCreation() {
 
   const poolOwner = computed(() => {
     if (poolCreationState.feeManagementType === 'governance') {
-      return POOLS.DelegateOwner;
+      // switch between chain Delegate owner
+      return isCelo.value? POOLS.DelegateOwner : POOLS.gnosisDelegateOwner;
     } else {
       if (poolCreationState.feeController === 'self') {
         return account.value;
