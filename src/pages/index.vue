@@ -1,5 +1,10 @@
 <template>
   <div class="lg:container lg:mx-auto pt-10 md:pt-12">
+    <div class="flex items-center justify-center mb-5">
+      <h5 class="mr-3">Total Liquidity:</h5>
+      <h4>${{ fNum(getTotalLiquidity) }}</h4>
+    </div>
+
     <template v-if="isWalletReady">
       <div class="px-4 lg:px-0">
         <BalStack horizontal justify="between" align="center">
@@ -25,11 +30,6 @@
       </div>
       <div class="mb-16" />
     </template>
-
-    <div class="flex items-center justify-center mb-5">
-      <h5 class="mr-3">Total Liquidity:</h5>
-      <h4>${{ getTotalLiquidity }}</h4>
-    </div>
 
     <div v-if="indexPools.length > 0">
       <div class="px-4 lg:px-0">
@@ -111,6 +111,7 @@ import useWeb3 from '@/services/web3/useWeb3';
 import usePoolFilters from '@/composables/pools/usePoolFilters';
 import useAlerts, { AlertPriority, AlertType } from '@/composables/useAlerts';
 import useBreakpoints from '@/composables/useBreakpoints';
+import useNumbers from '@/composables/useNumbers';
 
 export default defineComponent({
   components: {
@@ -121,6 +122,7 @@ export default defineComponent({
 
   setup() {
     // COMPOSABLES
+    const { fNum } = useNumbers();
     const router = useRouter();
     const { t } = useI18n();
     const { isWalletReady, isV1Supported, appNetworkConfig } = useWeb3();
@@ -235,6 +237,7 @@ export default defineComponent({
       addSelectedToken,
       removeSelectedToken,
       navigateToCreatePool,
+      fNum,
 
       // constants
       EXTERNAL_LINKS
