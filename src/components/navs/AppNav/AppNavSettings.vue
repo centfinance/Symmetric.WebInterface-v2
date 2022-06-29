@@ -124,7 +124,7 @@
         @update:modelValue="setTradeLiquidity"
       />
     </div>
-    <div v-if="isEIP1559SupportedNetwork" class="px-4 mt-6">
+    <!-- <div v-if="isEIP1559SupportedNetwork" class="px-4 mt-6">
       <div class="flex items-baseline">
         <span v-text="$t('transactionType')" class="mb-2 font-medium" />
         <BalTooltip>
@@ -139,7 +139,7 @@
         v-model="ethereumTxType"
         @update:modelValue="setEthereumTxType"
       />
-    </div>
+    </div> -->
     <div
       v-if="ENABLE_LEGACY_TRADE_INTERFACE && isGnosisSupportedNetwork"
       class="px-4 mt-6"
