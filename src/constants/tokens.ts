@@ -29,6 +29,8 @@ export const TOKENS = {
       BAL: '0x8427bD503dd3169cCC9aFF7326c15258Bc305478' // SYMM v2 on celo
     },
     '100': {
+      nativeAsset: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+      wNativeAsset: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
       WETH: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
       BAL: '0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84' // SYMM on Gnosis
     }
