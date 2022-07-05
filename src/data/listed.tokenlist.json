@@ -379,6 +379,14 @@
             "symbol": "WETHv2",
             "decimals": 18,
             "logoURI": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WETH.png"
+        },
+        {
+            "address": "0x9995cc8f20db5896943afc8ee0ba463259c931ed",
+            "chainId": 42220,
+            "name": "ETHIX",
+            "symbol": "ETHIX",
+            "decimals": 18,
+            "logoURI": "https://assets.coingecko.com/coins/images/3031/small/ETHIX_icon_256x256-256.png?1622195164"
         }
     ]
 }
