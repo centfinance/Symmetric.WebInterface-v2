@@ -46,9 +46,26 @@ export default function useTokenPricesQuery(
       useSymmetricQueries['getSYMM2PriceCELOV2']
     );
     const symmPrice = subgraphRes?.tokens[0]?.latestPrice?.price;
-    console.log(symmPrice);
     prices[symm2address] = {
       [currency.value]: Number((+symmPrice).toFixed(6))
+    };
+    return prices;
+  }
+
+  // TODO: kill this with fire as soon as Coingecko supports symmv2
+  async function injectEthixPriceOnCelo(
+    prices: TokenPrices
+  ): Promise<TokenPrices> {
+    const Ethix_address = '0x9995cc8F20Db5896943Afc8eE0ba463259c931ed';
+    const url =
+      'https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-celo';
+    const subgraphRes = await subgraphRequest(
+      url,
+      useSymmetricQueries['getEthixPriceCELOV2']
+    );
+    const ethixPrice = subgraphRes?.tokens[0]?.latestPrice?.price;
+    prices[Ethix_address] = {
+      [currency.value]: Number((+ethixPrice).toFixed(6))
     };
     return prices;
   }
@@ -88,6 +105,7 @@ export default function useTokenPricesQuery(
 
     prices = injectWstEth(prices);
     prices = await injectSymmV2PriceOnCelo(prices);
+    prices = await injectEthixPriceOnCelo(prices);
     return prices;
   };
 

@@ -32,5 +32,22 @@
         "price": true
       }
     }
+  },
+  "getEthixPriceCELOV2": {
+    "tokens": {
+      "__args": {
+        "first": 1,
+        "where": {
+          "id": "0x9995cc8f20db5896943afc8ee0ba463259c931ed"
+        }
+      },
+      "id": true,
+      "symbol": true,
+      "name": true,
+      "decimals": true,
+      "latestPrice": {
+        "price": true
+      }
+    }
   }
 }
