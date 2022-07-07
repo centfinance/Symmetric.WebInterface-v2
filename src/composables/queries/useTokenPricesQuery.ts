@@ -40,12 +40,13 @@ export default function useTokenPricesQuery(
     // get SYMM price from v1 subgraph
     const symm2address = '0x8427bD503dd3169cCC9aFF7326c15258Bc305478';
     const url =
-      'https://api.thegraph.com/subgraphs/name/centfinance/symmetricv1celo';
+      'https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-celo';
     const subgraphRes = await subgraphRequest(
       url,
-      useSymmetricQueries['getSYMM2PriceCELO']
+      useSymmetricQueries['getSYMM2PriceCELOV2']
     );
-    const symmPrice = subgraphRes?.tokenPrices[0].price;
+    const symmPrice = subgraphRes?.tokens[0]?.latestPrice?.price;
+    console.log(symmPrice);
     prices[symm2address] = {
       [currency.value]: Number((+symmPrice).toFixed(6))
     };
