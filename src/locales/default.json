@@ -694,5 +694,20 @@
     "yourTransactions": "Your transactions in this pool",
     "trendingPairs": "Trending pairs",
     "chooseAPair": "Please select a valid pair",
-    "youCanInvest": "You can invest"
+    "youCanInvest": "You can invest",
+    "poolChart": {
+        "defaultTitle": {
+          "tvl": "Current TVL"
+        },
+        "period": {
+          "all": "All time",
+          "days": "{0} days",
+          "title": "Select a period"
+        },
+        "tabs": {
+          "fees": "Fees",
+          "tvl": "TVL",
+          "volume": "Volume"
+        }
+      }
 }
