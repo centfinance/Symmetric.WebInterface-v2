@@ -14,6 +14,7 @@ import useNetwork from '../useNetwork';
 import { isStablePhantom } from '../usePool';
 
 import usePoolQuery from './usePoolQuery';
+import tokensProvider from '@/providers/tokens.provider';
 
 /**
  * TYPES
@@ -66,7 +67,8 @@ export default function usePoolSnapshotsQuery(
         snapshots
       };
     } else {
-      let tokens = pool.value.tokenAddresses;
+      // TODO: remove when tokens are listed on coingecko
+      let tokens = pool.value.tokenAddresses.filter(token  => token!=='0xA287A3722c367849eFA5c76e96BE36efd65C290e' && token !== '0x9995cc8F20Db5896943Afc8eE0ba463259c931ed');
       if (pool.value.tokenAddresses.includes(addresses.wstETH)) {
         // TODO - remove this once coingecko supports wstEth
         tokens = [...pool.value.tokenAddresses, addresses.stETH];
