@@ -1,6 +1,7 @@
 import { balancerSubgraphClient } from './balancer-subgraph.client';
 import { rpcProviderService as _rpcProviderService } from '@/services/rpc-provider/rpc-provider.service';
 import Pools from './entities/pools';
+import Tokens from './entities/tokens';
 import PoolShares from './entities/poolShares';
 import PoolActivities from './entities/poolActivities';
 import PoolSwaps from './entities/poolSwaps';
@@ -16,6 +17,7 @@ export default class BalancerSubgraphService {
   poolSwaps: PoolSwaps;
   poolSnapshots: PoolSnapshots;
   tradePairSnapshots: TradePairSnapshots;
+  tokens: Tokens
 
   constructor(
     readonly client = balancerSubgraphClient,
@@ -28,6 +30,7 @@ export default class BalancerSubgraphService {
     this.poolSwaps = new PoolSwaps(this);
     this.poolSnapshots = new PoolSnapshots(this);
     this.tradePairSnapshots = new TradePairSnapshots(this);
+    this.tokens = new Tokens(this);
   }
 
   public get blockTime(): number {
