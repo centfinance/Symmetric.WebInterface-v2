@@ -1,6 +1,6 @@
 import Service from '../../balancer-subgraph.service';
 import tokenQueryBuilder from './query';
-import { TokenPrice, QueryBuilder} from '../../types';
+import { TokenPrice, QueryBuilder } from '../../types';
 
 export default class Tokens {
   service: Service;

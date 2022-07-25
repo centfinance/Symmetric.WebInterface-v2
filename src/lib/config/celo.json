@@ -12,6 +12,7 @@
     "explorer": "https://explorer.celo.org",
     "explorerName": "CeloScan",
     "subgraph": "https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-celo",
+    "farmSubgraph": "https://api.thegraph.com/subgraphs/name/centfinance/celo-minichef",
     "poolsUrlV1": "",
     "poolsUrlV2": "",
     "subgraphs": {

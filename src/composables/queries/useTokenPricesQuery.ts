@@ -47,22 +47,24 @@ export default function useTokenPricesQuery(
     return prices;
   }
 
-  async function injectV2Prices(prices: TokenPrices, addresses: any ): Promise<TokenPrices>
-  {
-    const tokenForV2Query = addresses.value.filter((item: string) => !Object.keys(prices).includes(item))
-    .map((el: string) => {
-      return el.toLowerCase()
-    });
+  async function injectV2Prices(
+    prices: TokenPrices,
+    addresses: any
+  ): Promise<TokenPrices> {
+    const tokenForV2Query = addresses.value
+      .filter((item: string) => !Object.keys(prices).includes(item))
+      .map((el: string) => {
+        return el.toLowerCase();
+      });
 
     const tokens = await balancerSubgraphService.tokens.get({
-      where:
-        {
-          id_in: tokenForV2Query
-        }
+      where: {
+        id_in: tokenForV2Query
+      }
     });
-    tokens.map(t =>{
+    tokens.map(t => {
       // const symmPrice = subgraphRes?.tokenPrices[0].price;
-      const tPrice = t.latestPrice ? t.latestPrice.price : 0
+      const tPrice = t.latestPrice ? t.latestPrice.price : 0;
       prices[getAddress(t.id)] = {
         [currency.value]: Number((+tPrice).toFixed(6))
       };

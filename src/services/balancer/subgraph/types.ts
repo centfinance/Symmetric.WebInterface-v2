@@ -219,32 +219,32 @@ export type TradePairSnapshot = {
   };
 };
 export interface TokenPrice {
-  data:any;
-  id:string;
-  symbol:string
-  latestPrice?:{
-    price:string
-  }
+  data: any;
+  id: string;
+  symbol: string;
+  latestPrice?: {
+    price: string;
+  };
 }
 export interface Farm {
-  id:string;
-  pair:string;
-  rewarder?:{
-    id:string;
-    rewardToken:string;
+  id: string;
+  pair: string;
+  rewarder?: {
+    id: string;
+    rewardToken: string;
     rewardPerSecond: string;
     totalAllocPoint: string;
-  }
+  };
   rewarderAllocPoint: string;
-      allocPoint: string;
-      lastRewardTime: string;
-      accSymmPerShare: string;
-      slpBalance: string;
-      userCount: string;
-      symmChef: {
-        id: string;
-        symm:string;
-        symmPerSecond: string;
-        totalAllocPoint: string;
-      }
-};
+  allocPoint: string;
+  lastRewardTime: string;
+  accSymmPerShare: string;
+  slpBalance: string;
+  userCount: string;
+  symmChef: {
+    id: string;
+    symm: string;
+    symmPerSecond: string;
+    totalAllocPoint: string;
+  };
+}

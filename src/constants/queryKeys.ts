@@ -55,6 +55,12 @@ const QUERY_KEYS = {
       { networkId, account }
     ]
   },
+  Farms: {
+    Farms: (networkId: Ref<Network>, pair: string) => [
+      'farms',
+      { networkId, pair }
+    ]
+  },
   Tokens: {
     TrendingPairs: (userNetworkId: Ref<number>) => [
       'trendingTradePairs',
