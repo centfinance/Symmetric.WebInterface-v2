@@ -51,12 +51,13 @@ export default function useTokenPricesQuery(
     prices: TokenPrices,
     addresses: any
   ): Promise<TokenPrices> {
-    const tokenForV2Query = addresses.value
+    const tokenForV2Query: string[] = addresses.value
       .filter((item: string) => !Object.keys(prices).includes(item))
       .map((el: string) => {
         return el.toLowerCase();
       });
-
+      // TODO: Price for SYMMv2 on CELO
+      tokenForV2Query.push('0x8427bd503dd3169ccc9aff7326c15258bc305478');
     const tokens = await balancerSubgraphService.tokens.get({
       where: {
         id_in: tokenForV2Query

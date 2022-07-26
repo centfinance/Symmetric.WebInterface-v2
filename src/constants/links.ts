@@ -23,6 +23,7 @@ export const EXTERNAL_LINKS = {
   },
   Symmetric: {
     Help: 'https://symmetric.finance/#1539145981313-cd966911-eaaf',
+    Farms: 'https://farms.symm.fi',
     Medium:
       'https://medium.com/@Symmetric.Finance/whats-coming-with-symmetric-v2-b168b3830989',
     PrimeDaoMedium:

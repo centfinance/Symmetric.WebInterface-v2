@@ -141,11 +141,12 @@
           class="mb-4"
         />
         <BalLoadingBlock v-if="loadingPool" class="h-40 pool-actions-card" />
-        <PoolFarmCard v-if="!loadingPool && farmAvailable" 
-            :pool="pool" 
-            :farm="farm" 
-            class="mb-4"
-            />
+        <PoolFarmCard
+          v-if="!loadingPool && farmAvailable"
+          :pool="pool"
+          :farm="farm"
+          class="mb-4"
+        />
       </div>
       <!-- <div v-else class="order-1 px-1 lg:order-2 lg:px-0">
         <BalCard
