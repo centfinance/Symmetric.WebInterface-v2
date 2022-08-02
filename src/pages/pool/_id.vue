@@ -138,6 +138,14 @@
           v-else-if="!noInitLiquidity"
           :pool="pool"
           :missingPrices="missingPrices"
+          class="mb-4"
+        />
+        <BalLoadingBlock v-if="loadingPool" class="h-40 pool-actions-card" />
+        <PoolFarmCard
+          v-if="!loadingPool && farmAvailable"
+          :pool="pool"
+          :farm="farm"
+          class="mb-4"
         />
       </div>
       <!-- <div v-else class="order-1 px-1 lg:order-2 lg:px-0">
@@ -188,6 +196,8 @@ import { useRoute } from 'vue-router';
 import useNumbers from '@/composables/useNumbers';
 import { usePool } from '@/composables/usePool';
 import usePoolQuery from '@/composables/queries/usePoolQuery';
+import useFarmsQuery from '@/composables/queries/useFarmsQuery';
+import useSymmetricQueries from '@/composables/queries/useSymmetricQueries';
 import usePoolSnapshotsQuery from '@/composables/queries/usePoolSnapshotsQuery';
 import { POOLS } from '@/constants/pools';
 import { EXTERNAL_LINKS } from '@/constants/links';
@@ -225,6 +235,10 @@ export default defineComponent({
      * QUERIES
      */
     const poolQuery = usePoolQuery(route.params.id as string);
+    const farmQuery = useFarmsQuery(route.params.id.toString().substr(0, 42));
+    // const v2Prices = useSymmetricQueries(['0x8427bd503dd3169ccc9aff7326c15258bc305478']);
+    // console.log('V2 prices', v2Prices)
+
     const poolSnapshotsQuery = usePoolSnapshotsQuery(
       route.params.id as string,
       30
@@ -241,6 +255,7 @@ export default defineComponent({
      * COMPUTED
      */
     const pool = computed(() => poolQuery.data.value);
+    const farm = computed(() => farmQuery.data.value?.pages[0]);
     const {
       isStableLikePool,
       isLiquidityBootstrappingPool,
@@ -254,8 +269,11 @@ export default defineComponent({
         Number(pool.value.onchain.totalSupply) === 0
     );
 
+    const farmAvailable = computed(() => farm?.value?.pools.length);
     const communityManagedFees = computed(
-      () => pool.value?.owner == (isCelo.value ? POOLS.DelegateOwner : POOLS.gnosisDelegateOwner)
+      () =>
+        pool.value?.owner ==
+        (isCelo.value ? POOLS.DelegateOwner : POOLS.gnosisDelegateOwner)
     );
     const feesManagedByGauntlet = computed(
       () =>
@@ -281,8 +299,15 @@ export default defineComponent({
         poolQuery.isIdle.value ||
         poolQuery.error.value
     );
+    const farmQueryLoading = computed(
+      () =>
+        farmQuery.isLoading.value ||
+        farmQuery.isIdle.value ||
+        farmQuery.error.value
+    );
 
     const loadingPool = computed(() => poolQueryLoading.value || !pool.value);
+    const loadingFarm = computed(() => farmQueryLoading.value || !farm.value);
 
     const snapshots = computed(() => poolSnapshotsQuery.data.value?.snapshots);
     const historicalPrices = computed(
@@ -421,7 +446,9 @@ export default defineComponent({
       // computed
       appLoading,
       pool,
+      farm,
       noInitLiquidity,
+      farmAvailable,
       poolTypeLabel,
       poolFeeLabel,
       historicalPrices,

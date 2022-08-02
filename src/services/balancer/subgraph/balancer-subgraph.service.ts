@@ -17,7 +17,7 @@ export default class BalancerSubgraphService {
   poolSwaps: PoolSwaps;
   poolSnapshots: PoolSnapshots;
   tradePairSnapshots: TradePairSnapshots;
-  tokens: Tokens
+  tokens: Tokens;
 
   constructor(
     readonly client = balancerSubgraphClient,

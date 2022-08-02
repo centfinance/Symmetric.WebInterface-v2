@@ -8,12 +8,11 @@ const defaultArgs = {
 };
 
 const defaultAttrs = {
-    id: true,
-    symbol: true,
-    latestPrice:{
-      price:true
-    }
-   
+  id: true,
+  symbol: true,
+  latestPrice: {
+    price: true
+  }
 };
 
 export default (args = {}, attrs = {}) => ({

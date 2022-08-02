@@ -47,22 +47,28 @@ export default function useTokenPricesQuery(
     return prices;
   }
 
-  async function injectV2Prices(prices: TokenPrices, addresses: any ): Promise<TokenPrices>
-  {
-    const tokenForV2Query = addresses.value.filter((item: string) => !Object.keys(prices).includes(item))
-    .map((el: string) => {
-      return el.toLowerCase()
-    });
-
+  async function injectV2Prices(
+    prices: TokenPrices,
+    addresses: any
+  ): Promise<TokenPrices> {
+    const tokenForV2Query: string[] = addresses.value
+      .filter((item: string) => !Object.keys(prices).includes(item))
+      .map((el: string) => {
+        return el.toLowerCase();
+      });
+    // TODO: Price for SYMMv2 on CELO
+    tokenForV2Query.push('0x8427bd503dd3169ccc9aff7326c15258bc305478');
+    // TODO: Price for SYMM on GNOSIS
+    tokenForV2Query.push('0xc45b3c1c24d5f54e7a2cf288ac668c74dd507a84');
+    
     const tokens = await balancerSubgraphService.tokens.get({
-      where:
-        {
-          id_in: tokenForV2Query
-        }
+      where: {
+        id_in: tokenForV2Query
+      }
     });
-    tokens.map(t =>{
+    tokens.map(t => {
       // const symmPrice = subgraphRes?.tokenPrices[0].price;
-      const tPrice = t.latestPrice ? t.latestPrice.price : 0
+      const tPrice = t.latestPrice ? t.latestPrice.price : 0;
       prices[getAddress(t.id)] = {
         [currency.value]: Number((+tPrice).toFixed(6))
       };

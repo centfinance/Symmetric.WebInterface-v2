@@ -25,6 +25,7 @@ export interface Config {
   explorer: string;
   explorerName: string;
   subgraph: string;
+  farmSubgraph?: string;
   poolsUrlV1: string;
   poolsUrlV2: string;
   subgraphs: {
