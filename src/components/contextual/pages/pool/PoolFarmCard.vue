@@ -174,10 +174,10 @@ const poolTokens = computed(() => getTokens(Object.keys(rewardTokens.value)));
           <BalAsset :address="address" :size="36" class="mr-4" />
           <div class="flex flex-col">
             <span>
-              {{ poolTokens[index].symbol }}
+              {{ poolTokens[index]?.symbol }}
             </span>
             <span class="text-sm text-gray-500">
-              {{ poolTokens[index].name }}
+              {{ poolTokens[index]?.name }}
             </span>
           </div>
         </div>
@@ -193,14 +193,14 @@ const poolTokens = computed(() => getTokens(Object.keys(rewardTokens.value)));
       </div>
     </div>
     <BalBtn
-        tag="a"
-            :href="EXTERNAL_LINKS.Symmetric.Farms"
-            target="_blank"
-            rel="noreferrer"
-        label="Go to Farms"
-        color="symmetric"
-        block
-      />
+      tag="a"
+      :href="EXTERNAL_LINKS.Symmetric.Farms"
+      target="_blank"
+      rel="noreferrer"
+      label="Go to Farms"
+      color="symmetric"
+      block
+    />
     <span class="text-sm text-gray-500">
       &nbsp; Stake your LP tokens into Farm to earn Rewards
     </span>

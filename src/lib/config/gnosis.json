@@ -12,7 +12,7 @@
   "explorer": "https://blockscout.com/xdai/mainnet/",
   "explorerName": "Blockscout",
   "subgraph": "https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-gnosis",
-  "farmSubgraph": "https://api.thegraph.com/subgraphs/name/centfinance/gnosis-symchef",
+  "farmSubgraph": "https://api.thegraph.com/subgraphs/name/centfinance/gnosis-symchef-dev",
   "poolsUrlV1": "",
   "poolsUrlV2": "",
   "subgraphs": {
