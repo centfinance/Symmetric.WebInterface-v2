@@ -1,0 +1,71 @@
+{
+    "key": "2222",
+    "chainId": 2222,
+    "chainName": "Kava",
+    "name": "Kava Mainnet",
+    "shortName": "Kava",
+    "network": "kava",
+    "unknown": false,
+    "rpc": "https://evm.kava.io",
+    "ws": "wss://evm.kava.io/ws",
+    "loggingRpc": "https://evm.kava.io",
+    "explorer": "https://explorer.kava.io",
+    "explorerName": "Kava-evm",
+    "subgraph": "https://the-graph.kava.io/subgraphs/name/centfinance/kava",
+    "farmSubgraph": "",
+    "poolsUrlV1": "",
+    "poolsUrlV2": "",
+    "subgraphs": {
+      "aave": ""
+    },
+    "supportsEIP1559": true,
+    "nativeAsset": {
+        "name": "wKawa",
+        "address": "",
+        "symbol": "wKAWA",
+        "decimals": 18,
+        "deeplinkId": "kava",
+        "logoURI": "https://app.kava.io/static/media/kavaIcon.be6dad56.svg",
+        "minTransactionBuffer": "0.05"
+      },
+    "addresses": {
+      "bFactory": "",
+      "bActions": "",
+      "dsProxyRegistry": "",
+      "exchangeProxy": "",
+      "merkleRedeem": "",
+      "merkleOrchard": "",
+      "multicall": "0x149bBb210051851016F57a2824C0444f642833a6",
+      "authorizer": "0xe6c5610b06A19b9726f739a7f699029479C5e6EA",
+      "vault": "0xA18808989E7EB0FcF0932fd00D007F3C118B78E7",
+      "weightedPoolFactory": "0x0a0717A8A0641eA3C4eB82Aa9D82F07Ad887750b",
+      "stablePoolFactory": "0x8628Ab9f1E7113abC29fDc05c9c37d9B8FcEb4e9",
+      "tokenFactory": "",
+      "weth": "",
+      "stETH": "",
+      "wstETH": "",
+      "lidoRelayer": "",
+      "balancerHelpers": "0x624189B7FAe63F534F58Dc4636a85fC4225ca44A",
+      "batchRelayer": "0x8A1884dCFBf8F8a266E70Db7c3ea043C9A6Ca2F4"
+    },
+    "keys": {
+      "infura": "daaa68ec242643719749dd1caba2fc66",
+      "alchemy": "oGLgncMVHNWltnK0nTfiryxQ6gYemKQO"
+    },
+    "strategies": {
+      "0": {
+        "type": "0",
+        "name": "stablePool"
+      },
+      "1": {
+        "type": "1",
+        "name": "weightedPool"
+      },
+      "2": {
+        "type": "2",
+        "name": "weightedPool"
+      }
+    },
+    "supportsElementPools": true
+  }
+  

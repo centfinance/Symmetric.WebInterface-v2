@@ -1,0 +1,8 @@
+{
+    "network": "kava",
+    "chainId": 2222,
+    "defaultPrecision": 2,
+    "rpcUrl": "https://evm.kava.io",
+    "wsUrl": "wss://evm.kava.io/wss",
+    "ENSRegistry": "0x3DE51c3960400A0F752d3492652Ae4A0b2A36FB3"
+  } 

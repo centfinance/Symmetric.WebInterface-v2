@@ -15,6 +15,8 @@ const network = ((): Network => {
       return Network.CELO;
     case '100':
       return Network.GNOSIS;
+    case '2222':
+      return Network.KAVA
     default:
       return Network.MAINNET;
   }

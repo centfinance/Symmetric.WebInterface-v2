@@ -62,6 +62,7 @@ export default function useWeb3() {
     () => appNetworkConfig.chainId === Network.ARBITRUM
   );
   const isCelo = computed(() => appNetworkConfig.chainId === Network.CELO);
+  const isKava = computed(() => appNetworkConfig.chainId === Network.KAVA);
   const isGnosis = computed(() => appNetworkConfig.chainId === Network.GNOSIS);
   const isEIP1559SupportedNetwork = computed(
     () => appNetworkConfig.supportsEIP1559
@@ -139,6 +140,7 @@ export default function useWeb3() {
     isPolygon,
     isArbitrum,
     isCelo,
+    isKava,
     isGnosis,
     isEIP1559SupportedNetwork,
 

@@ -4,6 +4,7 @@ export const POOLS = {
   },
   DelegateOwner: '0x2088DAdbd1D068b8A80894A4bb56BCD575c4AfFD',
   gnosisDelegateOwner: '0x689cC0Ea1140546a8a7985315E9C8fef7e0461bc',
+  kavaDelegateOwner: '0x71ee4bed4f30199ef34f1926bae5548ba7f7430e',
   ZeroAddress: '0x0000000000000000000000000000000000000000',
   DynamicFees: {
     Gauntlet: [
@@ -36,6 +37,9 @@ export const POOLS = {
     '0x47B7bdA16AB8B617E976c83A2c3c8664944d8Ed2': 'weightedPool', // Celo
     '0x7dF194500b8b8dcFe6A0b8E412f8a166c89Bf255': 'stablePool', // Celo
     '0xe007Ba1c5665567175B4d462f8dba14506e7f592': 'liquidityBootstrappingPool', // Celo LBP
+    '0x0a0717A8A0641eA3C4eB82Aa9D82F07Ad887750b': 'weightedPool', // Kava
+    '0x8628Ab9f1E7113abC29fDc05c9c37d9B8FcEb4e9': 'stablePool', // Kava
+    '0x3a62327c3C05606De1Bf48226ac5f20E109bA16B': 'liquidityBootstrappingPool', // Kava LBP
     '0x67d27634e44793fe63c467035e31ea8635117cd4': 'stablePool', // Metastable
     '0x751dfdace1ad995ff13c927f6f761c6604532c79': 'stablePool', // Kovan
     '0x590e544e7ca956bb878f8c873e82e65550d67d2f': 'stablePool', // Kovan Metastable

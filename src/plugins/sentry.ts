@@ -15,7 +15,8 @@ const networkMap = {
   [Network.POLYGON]: 'polygon',
   [Network.ARBITRUM]: 'arbitrum-one',
   [Network.CELO]: 'celo',
-  [Network.GNOSIS]: 'gnosis'
+  [Network.GNOSIS]: 'gnosis',
+  [Network.KAVA]: 'kava',
 };
 const environment = `${ENV}-${networkMap[networkId.value]}`;
 const release = `frontend-v2@${version}`;

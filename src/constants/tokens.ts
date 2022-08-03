@@ -31,6 +31,10 @@ export const TOKENS = {
     '100': {
       WETH: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
       BAL: '0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84' // SYMM on Gnosis
+    },
+    '2222': {
+      WETH: '0x4c7deaEA2257E21B34916E75b1E781f674AE10f2',
+      BAL: '0x335826a0373d479e1de544d1c3E37EE3E065DbB9' // SYMM on Kava
     }
   },
   Prices: {

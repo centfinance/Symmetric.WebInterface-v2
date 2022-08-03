@@ -10,7 +10,7 @@
     >
       <h6>New to Defi?</h6>
       <p class="text-sm">
-        Symmetric is a DeFi app on Gnosis (xDai) & Celo. To invest and trade
+        Symmetric is a DeFi app on Kava, Gnosis (xDai) & Celo. To invest and trade
         here, you'll first need to set up a compatible wallet.
         <BalLink :href="EXTERNAL_LINKS.Symmetric.Help" external>
           Learn More

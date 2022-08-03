@@ -76,6 +76,12 @@ export default defineComponent({
         key: '42220'
       },
       {
+        id: 'kava',
+        name: 'Kava',
+        subdomain: 'kava',
+        key: '2222'
+      },
+      {
         id: 'gnosis',
         name: 'Gnosis',
         subdomain: 'gnosis',

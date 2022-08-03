@@ -2175,24 +2175,24 @@
   "resolved" "https://registry.npmjs.org/@soda/get-current-script/-/get-current-script-1.0.2.tgz"
   "version" "1.0.2"
 
-"@symmetric-v2/sdk@^0.0.24":
-  "integrity" "sha512-wDLjGn/K8q6PVx9KEOceHh9ZWVaejWZmUGeFgD2EIq2VIcnPnxlPrgyoQQAw3zQ2Gl40De7prWO1o9dgIjfGIQ=="
-  "resolved" "https://registry.npmjs.org/@symmetric-v2/sdk/-/sdk-0.0.24.tgz"
-  "version" "0.0.24"
+"@symmetric-v2/sdk@^0.0.26":
+  "integrity" "sha512-4qLKyI25+XrYHImYr6Y5lMfcSiJKtPN9WuvXKGiBOKjUgjpGZgqRQ9BhxkRWMoKTBsfO2tlQcfw3zhjuQiHZIw=="
+  "resolved" "https://registry.npmjs.org/@symmetric-v2/sdk/-/sdk-0.0.26.tgz"
+  "version" "0.0.26"
   dependencies:
     "@ethersproject/abi" "^5.4.0"
     "@ethersproject/abstract-signer" "^5.4.0"
     "@ethersproject/contracts" "^5.4.0"
     "@ethersproject/providers" "^5.5.0"
     "@graphprotocol/graph-cli" "^0.27.0"
-    "@symmetric-v2/sor2" "^2.1.2"
+    "@symmetric-v2/sor2" "^2.1.3"
     "g" "^2.0.1"
     "lodash" "^4.17.21"
 
-"@symmetric-v2/sor2@^2.1.0", "@symmetric-v2/sor2@^2.1.2":
-  "integrity" "sha512-B2dhGRpPTI1tBlEQBDbEMzyGf/Rj70h4TZYgTW7xr88w4cpED3me//VFnAQbqkmBrNGgbV/RN3MGBsD//aGusQ=="
-  "resolved" "https://registry.npmjs.org/@symmetric-v2/sor2/-/sor2-2.1.2.tgz"
-  "version" "2.1.2"
+"@symmetric-v2/sor2@^2.1.3":
+  "integrity" "sha512-cfORC4EZ2s7N1lWqvaJ0EbpXh3X0mOpKo4aYfqX1HD4qycXja8fsu+YTfXwhugEH8gq2jSxGeKH403rEg2OBBQ=="
+  "resolved" "https://registry.npmjs.org/@symmetric-v2/sor2/-/sor2-2.1.3.tgz"
+  "version" "2.1.3"
   dependencies:
     "@georgeroman/balancer-v2-pools" "0.0.7"
     "isomorphic-fetch" "^2.2.1"

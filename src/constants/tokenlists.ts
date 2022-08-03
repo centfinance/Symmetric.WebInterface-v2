@@ -44,6 +44,17 @@ export const TOKEN_LIST_MAP: TokenListMapByNetwork = {
       // 'https://umaproject.org/uma.tokenlist.json'
     ]
   },
+  '2222': {
+    Balancer: {
+      Default:
+        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/symmetric-v2/src/data/listed.tokenlist.json',
+      Vetted:
+        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/symmetric-v2/src/data/listed.tokenlist.json'
+    },
+    External: [
+      'ipns://tokens.uniswap.org'
+    ]
+  },
   '100': {
     Balancer: {
       Default:

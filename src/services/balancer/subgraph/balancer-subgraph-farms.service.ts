@@ -28,6 +28,8 @@ export default class BalancerSubgraphFarmService {
         return 1;
       case Network.CELO:
         return 5;
+      case Network.KAVA:
+        return 5;
       case Network.GNOSIS:
         return 5;
       default:

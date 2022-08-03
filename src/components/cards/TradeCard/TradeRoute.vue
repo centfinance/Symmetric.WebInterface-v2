@@ -439,6 +439,7 @@ export default defineComponent({
         [Network.POLYGON]: 'polygon.',
         [Network.ARBITRUM]: 'arbitrum.',
         [Network.CELO]: 'celo.',
+        [Network.KAVA]: 'kava',
         [Network.GNOSIS]: 'gnosis.'
       };
       const prefix = prefixMap[chainId] || '';

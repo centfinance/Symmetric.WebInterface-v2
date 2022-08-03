@@ -250,7 +250,7 @@ export default defineComponent({
         color = 'red';
       } else {
         switch (userNetworkConfig.value?.chainId) {
-          case Network.KOVAN:
+          case Network.KAVA:
             color = 'purple';
             break;
           case Network.GNOSIS:

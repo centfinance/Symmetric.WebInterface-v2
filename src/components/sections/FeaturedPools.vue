@@ -32,7 +32,7 @@
           <span>
             Symmetric and PrimeDAO areannounced a partnership between the two
             DAOs that will align our interests, bring a fair and efficient token
-            launchpad to Celo and Gnosis.
+            launchpad to Kava, Celo and Gnosis.
           </span>
           <template v-slot:footer>
             <BalLink :href="EXTERNAL_LINKS.Symmetric.PrimeDaoMedium" external>
