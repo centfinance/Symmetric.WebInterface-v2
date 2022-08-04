@@ -13,7 +13,7 @@ export enum Network {
   ARBITRUM = 42161,
   CELO = 42220,
   GNOSIS = 100,
-  KAVA = 2222,
+  KAVA = 2222
 }
 
 /**

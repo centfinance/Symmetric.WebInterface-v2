@@ -62,7 +62,7 @@ export default function useTokenPricesQuery(
     tokenForV2Query.push('0xc45b3c1c24d5f54e7a2cf288ac668c74dd507a84');
     // TODO: Price for SYMM on KAVA
     tokenForV2Query.push('0x335826a0373d479e1de544d1c3E37EE3E065DbB9');
-    
+
     const tokens = await balancerSubgraphService.tokens.get({
       where: {
         id_in: tokenForV2Query

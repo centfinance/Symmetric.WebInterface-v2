@@ -51,9 +51,7 @@ export const TOKEN_LIST_MAP: TokenListMapByNetwork = {
       Vetted:
         'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/symmetric-v2/src/data/listed.tokenlist.json'
     },
-    External: [
-      'ipns://tokens.uniswap.org'
-    ]
+    External: ['ipns://tokens.uniswap.org']
   },
   '100': {
     Balancer: {

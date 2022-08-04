@@ -22,5 +22,9 @@
   "42220": {
     "input": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     "output": "0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1"
+  },
+  "2222": {
+    "input": "0xB44a9B6905aF7c801311e8F4E76932ee959c663C",
+    "output": "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A"
   }
 }

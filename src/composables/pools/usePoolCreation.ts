@@ -248,7 +248,11 @@ export default function usePoolCreation() {
   const poolOwner = computed(() => {
     if (poolCreationState.feeManagementType === 'governance') {
       // switch between chain Delegate owner
-      return isCelo.value ? POOLS.DelegateOwner : isGnosis.value ? POOLS.gnosisDelegateOwner : POOLS.kavaDelegateOwner;
+      return isCelo.value
+        ? POOLS.DelegateOwner
+        : isGnosis.value
+        ? POOLS.gnosisDelegateOwner
+        : POOLS.kavaDelegateOwner;
     } else {
       if (poolCreationState.feeController === 'self') {
         return account.value;

@@ -228,7 +228,14 @@ export default defineComponent({
     const { fNum } = useNumbers();
     const { isWalletReady } = useWeb3();
     const { prices } = useTokens();
-    const { blockNumber, isKovan, isMainnet, isPolygon, isCelo, isGnosis } = useWeb3();
+    const {
+      blockNumber,
+      isKovan,
+      isMainnet,
+      isPolygon,
+      isCelo,
+      isGnosis
+    } = useWeb3();
     const { addAlert, removeAlert } = useAlerts();
     const { balancerTokenListTokens } = useTokens();
 
@@ -274,7 +281,11 @@ export default defineComponent({
     const communityManagedFees = computed(
       () =>
         pool.value?.owner ==
-        (isCelo.value ? POOLS.DelegateOwner : isGnosis.value ? POOLS.gnosisDelegateOwner : POOLS.kavaDelegateOwner)
+        (isCelo.value
+          ? POOLS.DelegateOwner
+          : isGnosis.value
+          ? POOLS.gnosisDelegateOwner
+          : POOLS.kavaDelegateOwner)
     );
     const feesManagedByGauntlet = computed(
       () =>
