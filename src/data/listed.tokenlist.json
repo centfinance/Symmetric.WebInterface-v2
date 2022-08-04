@@ -394,7 +394,7 @@
             "name": "BNB",
             "symbol": "BNB",
             "decimals": 18,
-            "logoURI": "https://app.kava.io/static/media/bnbIcon.4aebfae9.svg"
+            "logoURI": "https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon-thumbnail.png"
         },
         {
             "address": "0xB44a9B6905aF7c801311e8F4E76932ee959c663C",
@@ -402,7 +402,7 @@
             "name": "USDT",
             "symbol": "USDT",
             "decimals": 18,
-            "logoURI": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=023"
+            "logoURI": "https://w7.pngwing.com/pngs/840/253/png-transparent-usdt-cryptocurrencies-icon-thumbnail.png"
         }
     ]
 }
