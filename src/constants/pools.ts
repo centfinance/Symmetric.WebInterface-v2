@@ -10,7 +10,7 @@ export const POOLS = {
       '0x06df3b2bbb68adc8b0e302443692037ed9f91b42000000000000000000000063'
     ]
   },
-  BlockList: [''],
+  BlockList: ['0x7228d7898a7fe0a24746cf43b11a7fe004fab2ba000200000000000000000019'],
   ExcludedPoolTypes: ['Element', 'AaveLinear', 'Linear'],
   Stable: {
     AllowList: [
