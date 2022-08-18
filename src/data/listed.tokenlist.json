@@ -333,6 +333,14 @@
             "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/celo/assets/0x2C98Ebada737f6f75B410c0eaa66A19B110796b5/logo.png"
         },
         {
+            "address": "0xBc440BB632ac311F8877dEE23e77ddb1065703B7",
+            "chainId": 42220,
+            "name": "Prime (Wormhole)",
+            "symbol": "D2D",
+            "decimals": 18,
+            "logoURI": "https://assets.coingecko.com/coins/images/21609/small/RJD82RrV_400x400.jpg?1639559164"
+        },
+        {
             "address": "0x00Be915B9dCf56a3CBE739D9B9c202ca692409EC",
             "chainId": 42220,
             "name": "Ubeswap",
