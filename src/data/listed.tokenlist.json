@@ -397,7 +397,7 @@
             "logoURI": "https://app.kava.io/static/media/bnbIcon.4aebfae9.svg"
         },
         {
-            "address": "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A ",
+            "address": "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A",
             "chainId": 2222,
             "name": "BNB old",
             "symbol": "BNB",
