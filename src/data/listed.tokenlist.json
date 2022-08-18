@@ -389,12 +389,20 @@
             "logoURI": "https://assets.coingecko.com/coins/images/3031/small/ETHIX_icon_256x256-256.png?1622195164"
         },
         {
-            "address": "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A",
+            "address": "0xABd380327Fe66724FFDa91A87c772FB8D00bE488",
             "chainId": 2222,
-            "name": "BNB",
+            "name": "BNB new",
             "symbol": "BNB",
             "decimals": 18,
-            "logoURI": "https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon-thumbnail.png"
+            "logoURI": "https://app.kava.io/static/media/bnbIcon.4aebfae9.svg"
+        },
+        {
+            "address": "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A ",
+            "chainId": 2222,
+            "name": "BNB old",
+            "symbol": "BNB",
+            "decimals": 18,
+            "logoURI": "https://app.kava.io/static/media/bnbIcon.4aebfae9.svg"
         },
         {
             "address": "0xB44a9B6905aF7c801311e8F4E76932ee959c663C",
@@ -402,7 +410,47 @@
             "name": "USDT",
             "symbol": "USDT",
             "decimals": 18,
-            "logoURI": "https://w7.pngwing.com/pngs/840/253/png-transparent-usdt-cryptocurrencies-icon-thumbnail.png"
+            "logoURI": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=023"
+        },
+        {
+            "address": "0x332730a4F6E03D9C55829435f10360E13cfA41Ff",
+            "chainId": 2222,
+            "name": "BUSD",
+            "symbol": "BUSD",
+            "decimals": 18,
+            "logoURI": "https://cryptologos.cc/logos/binance-usd-busd-logo.svg?v=023"
+        },
+        {
+            "address": "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f",
+            "chainId": 2222,
+            "name": "USDC",
+            "symbol": "USDC",
+            "decimals": 18,
+            "logoURI": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=023"
+        },
+        {
+            "address": "0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b",
+            "chainId": 2222,
+            "name": "WKAVA",
+            "symbol": "WKAVA",
+            "decimals": 18,
+            "logoURI": "https://app.kava.io/static/media/kavaIcon.be6dad56.svg"
+        },
+        {
+            "address": "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",
+            "chainId": 2222,
+            "name": "WBTC",
+            "symbol": "WBTC",
+            "decimals": 18,
+            "logoURI": "https://cryptologos.cc/logos/wrapped-bitcoin-wbtc-logo.svg?v=023"
+        },
+        {
+            "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+            "chainId": 2222,
+            "name": "WETH",
+            "symbol": "WETH",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
         }
     ]
 }
