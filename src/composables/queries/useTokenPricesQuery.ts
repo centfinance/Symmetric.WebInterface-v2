@@ -60,7 +60,7 @@ export default function useTokenPricesQuery(
     tokenForV2Query.push('0x8427bd503dd3169ccc9aff7326c15258bc305478');
     // TODO: Price for SYMM on GNOSIS
     tokenForV2Query.push('0xc45b3c1c24d5f54e7a2cf288ac668c74dd507a84');
-    
+
     const tokens = await balancerSubgraphService.tokens.get({
       where: {
         id_in: tokenForV2Query
