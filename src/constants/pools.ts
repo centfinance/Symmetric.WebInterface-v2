@@ -1,6 +1,6 @@
 export const POOLS = {
   Pagination: {
-    PerPage: 10
+    PerPage: 30
   },
   DelegateOwner: '0x2088DAdbd1D068b8A80894A4bb56BCD575c4AfFD',
   gnosisDelegateOwner: '0x689cC0Ea1140546a8a7985315E9C8fef7e0461bc',
