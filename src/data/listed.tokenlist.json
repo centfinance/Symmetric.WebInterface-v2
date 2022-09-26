@@ -417,7 +417,7 @@
             "chainId": 2222,
             "name": "USDT",
             "symbol": "USDT",
-            "decimals": 18,
+            "decimals": 6,
             "logoURI": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=023"
         },
         {
@@ -433,7 +433,7 @@
             "chainId": 2222,
             "name": "USDC",
             "symbol": "USDC",
-            "decimals": 18,
+            "decimals": 6,
             "logoURI": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=023"
         },
         {
