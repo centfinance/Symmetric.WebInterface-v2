@@ -11,7 +11,7 @@
     "loggingRpc": "https://evm.kava.io",
     "explorer": "https://explorer.kava.io",
     "explorerName": "Kava-evm",
-    "subgraph": "https://subgraph.symmetric.exchange/subgraphs/name/centfinance/kava",
+    "subgraph": "https://the-graph.kava.io/subgraphs/name/centfinance/kava",
     "farmSubgraph": "",
     "poolsUrlV1": "",
     "poolsUrlV2": "",
