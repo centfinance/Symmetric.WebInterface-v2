@@ -2,7 +2,7 @@
     "key": "2222",
     "chainId": 2222,
     "chainName": "Kava",
-    "name": "Kava Mainnet",
+    "name": "Kava (EVM) Mainnet",
     "shortName": "Kava",
     "network": "kava",
     "unknown": false,
