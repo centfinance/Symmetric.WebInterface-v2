@@ -16,7 +16,7 @@ import { bnum, forChange } from '@/lib/utils';
 import {
   lpTokensFor,
   isManaged,
-  isStableLike,
+  // isStableLike,
   isStablePhantom
 } from '../usePool';
 
@@ -43,8 +43,7 @@ export default function usePoolQuery(
    * METHODS
    */
   function isBlocked(pool: Pool): boolean {
-    const requiresAllowlisting =
-      isStableLike(pool.poolType) || isManaged(pool.poolType);
+    const requiresAllowlisting = isManaged(pool.poolType);
     const isOwnedByUser =
       isAddress(account.value) &&
       getAddress(pool.owner) === getAddress(account.value);
