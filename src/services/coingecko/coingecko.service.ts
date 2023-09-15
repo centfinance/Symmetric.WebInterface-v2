@@ -9,7 +9,7 @@ export const getNativeAssetId = (chainId: string): string => {
     '137': 'matic-network',
     '42161': 'ethereum',
     '42220': 'celo',
-    '100': 'gnosis'
+    '100': 'xdai'
   };
 
   return mapping[chainId] || 'ethereum';

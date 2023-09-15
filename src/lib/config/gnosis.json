@@ -21,7 +21,7 @@
   "supportsEIP1559": true,
   "nativeAsset": {
       "name": "Xdai",
-      "address": "",
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
       "symbol": "XDAI",
       "decimals": 18,
       "deeplinkId": "xdai",
@@ -41,7 +41,7 @@
     "weightedPoolFactory": "0xb13A501fA658389e437E3047d56F2Bf945207a5A",
     "stablePoolFactory": "0xF9e6BE5A015Da5dc29B42ff345bB7Dd1b6C60aC7",
     "tokenFactory": "",
-    "weth": "",
+    "weth": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
     "stETH": "",
     "wstETH": "",
     "lidoRelayer": "",

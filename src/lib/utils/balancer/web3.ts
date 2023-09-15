@@ -72,8 +72,8 @@ export async function sendTransaction(
       }
     }
     // TODO:
-    //  return await contractWithSigner[action](...params, paramsOverrides);
-    return await contractWithSigner[action](...params);
+    return await contractWithSigner[action](...params, paramsOverrides);
+//    return await contractWithSigner[action](...params);
   } catch (e) {
     const error = e as MetamaskError;
 
