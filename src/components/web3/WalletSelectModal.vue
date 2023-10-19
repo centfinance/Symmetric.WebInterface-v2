@@ -8,11 +8,11 @@
     <div
       class="p-4 rounded-lg bg-gradient-to-b from-gray-50 dark:from-gray-900 to-gray-100 dark:to-gray-850"
     >
-      <h6>New to Celo?</h6>
+      <h6>New to Defi?</h6>
       <p class="text-sm">
-        Symmetric is a DeFi app on Celo. To invest and trade here, you'll first
-        need to set up an Celo compatible wallet.
-        <BalLink :href="EXTERNAL_LINKS.Ethereum.Wallets" external>
+        Symmetric is a DeFi app on Gnosis (xDai) & Celo. To invest and trade
+        here, you'll first need to set up a compatible wallet.
+        <BalLink :href="EXTERNAL_LINKS.Symmetric.Help" external>
           Learn More
           <span class="align-middle"
             ><BalIcon name="arrow-up-right" size="sm"

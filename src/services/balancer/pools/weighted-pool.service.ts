@@ -127,7 +127,8 @@ export default class WeightedPoolService {
     };
 
     const vaultAddress = configService.network.addresses.vault;
-
+    console.log('VAULT:');
+    console.log(vaultAddress);
     return sendTransaction(
       provider,
       vaultAddress,

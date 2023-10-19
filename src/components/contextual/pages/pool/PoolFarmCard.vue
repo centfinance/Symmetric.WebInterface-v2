@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import { toRef, computed } from 'vue';
-import useWithdrawMath from '@/components/forms/pool_actions/WithdrawForm/composables/useWithdrawMath';
-import { FullPool, Farm } from '@/services/balancer/subgraph/types';
+import { computed } from 'vue';
+import { FullPool } from '@/services/balancer/subgraph/types';
 import useTokens from '@/composables/useTokens';
 import useNumbers from '@/composables/useNumbers';
-import useUserSettings from '@/composables/useUserSettings';
-import { bnum } from '@/lib/utils';
 import { EXTERNAL_LINKS } from '@/constants/links';
-import useWeb3 from '@/services/web3/useWeb3';
-import { lpTokensFor } from '@/composables/usePool';
-import { getAddress, isAddress } from '@ethersproject/address';
-import { Price } from '@balancer-labs/sor/dist/types';
+import { getAddress } from '@ethersproject/address';
 
 /**
  * TYPES
@@ -29,13 +23,10 @@ const props = defineProps<Props>();
  * COMPOSABLES
  */
 // const { hasBpt } = useWithdrawMath(toRef(props, 'pool'));
-const { balanceFor, nativeAsset, wrappedNativeAsset, getTokens } = useTokens();
+const { getTokens } = useTokens();
 const { fNum, toFiat } = useNumbers();
-const { currency } = useUserSettings();
-const { isWalletReady, toggleWalletSelectModal } = useWeb3();
 const averageBlockTime = 5; // TBD for CELO & GNOSIS is fine, if anyother network then change
 const blocksPerDay = 86400 / Number(averageBlockTime);
-let tokenRewards: { [address: string]: { rewardsPerDay: string } };
 /**
  * COMPUTED
  */

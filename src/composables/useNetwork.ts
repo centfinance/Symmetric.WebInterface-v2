@@ -9,10 +9,10 @@ export enum Network {
   RINKEBY = 4,
   GÖRLI = 5,
   KOVAN = 42,
-  GNOSIS = 100,
   POLYGON = 137,
   ARBITRUM = 42161,
-  CELO = 42220
+  CELO = 42220,
+  GNOSIS = 100
 }
 
 /**

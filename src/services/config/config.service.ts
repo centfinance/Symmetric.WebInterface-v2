@@ -22,7 +22,7 @@ export default class ConfigService {
       APP_ENV: process.env.VUE_APP_ENV || 'development',
       NETWORK: networkId.value,
       APP_DOMAIN:
-        process.env.VUE_APP_DOMAIN || 'dev-symmv2-gnosis.symmetric.exchange',
+        process.env.VUE_APP_DOMAIN || 'dev-symmv2-celo.symmetric.exchange',
       IPFS_NODE: process.env.VUE_APP_IPFS_NODE || 'cloudflare-ipfs.com',
       BLOCKNATIVE_DAPP_ID:
         process.env.VUE_APP_BLOCKNATIVE_DAPP_ID || 'MISSING_KEY',

@@ -12,6 +12,7 @@
   "explorer": "https://explorer.celo.org",
   "explorerName": "CeloScan",
   "subgraph": "https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-celo",
+  "farmSubgraph": "https://api.thegraph.com/subgraphs/name/centfinance/celo-minichef",
   "poolsUrlV1": "",
   "poolsUrlV2": "",
   "subgraphs": {
@@ -38,7 +39,6 @@
     "authorizer": "0x58c4281C3E42Bc33d77adeD5aD6aed57cD8c793a",
     "vault": "0xD25E02047E76b688445ab154785F2642c6fe3f73",
     "weightedPoolFactory": "0x47B7bdA16AB8B617E976c83A2c3c8664944d8Ed2",
-    "investmentPoolFactory": "0x9bB01f19D9AC3a70e469863BA7Cb521a0B926e5a",
     "stablePoolFactory": "0x7dF194500b8b8dcFe6A0b8E412f8a166c89Bf255",
     "tokenFactory": "",
     "weth": "",

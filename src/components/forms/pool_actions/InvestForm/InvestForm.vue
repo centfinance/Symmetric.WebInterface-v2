@@ -128,6 +128,7 @@ function tokenWeight(address: string): number {
   if (address === nativeAsset.address) {
     return props.pool.onchain.tokens[wrappedNativeAsset.value.address].weight;
   }
+
   return props.pool.onchain.tokens[address].weight;
 }
 
@@ -144,7 +145,8 @@ function hint(index: number): string {
 }
 
 function tokenOptions(index: number): string[] {
-  return props.pool.tokenAddresses[index] === wrappedNativeAsset.value.address
+  return wrappedNativeAsset.value != undefined &&
+    props.pool.tokenAddresses[index] === wrappedNativeAsset.value.address
     ? [wrappedNativeAsset.value.address, nativeAsset.address]
     : [];
 }
@@ -237,7 +239,7 @@ watch(useNativeAsset, shouldUseNativeAsset => {
 
     <div
       v-if="highPriceImpact"
-      class="border dark:border-gray-700 rounded-lg p-2 pb-2 mt-4"
+      class="p-2 pb-2 mt-4 border rounded-lg dark:border-gray-700"
     >
       <BalCheckbox
         v-model="highPriceImpactAccepted"
@@ -254,14 +256,14 @@ watch(useNativeAsset, shouldUseNativeAsset => {
       <BalBtn
         v-if="!isWalletReady"
         :label="$t('connectWallet')"
-        color="gradient"
+        color="symmetric"
         block
         @click="toggleWalletSelectModal"
       />
       <BalBtn
         v-else
         :label="$t('preview')"
-        color="gradient"
+        color="symmetric"
         :disabled="
           !hasAmounts ||
             !hasValidInputs ||

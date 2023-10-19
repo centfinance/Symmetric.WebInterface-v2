@@ -1,7 +1,7 @@
 <template>
   <BalCard shadow="none" v-if="routes.length > 0">
     <div
-      class="flex text-gray-500 items-center cursor-pointer"
+      class="flex items-center text-gray-500 cursor-pointer"
       @click="toggleVisibility"
     >
       <div class="mr-2">
@@ -38,7 +38,7 @@
           </div>
           <div class="relative mt-2">
             <div
-              class="pair-line absolute h-1/2 mx-9 border-b border-dashed border-gray-500"
+              class="absolute border-b border-gray-500 border-dashed pair-line h-1/2 mx-9"
             />
             <div class="relative z-10 flex justify-between">
               <BalAsset :address="input.address" :size="36" />
@@ -54,7 +54,7 @@
             name="triangle"
             size="xxs"
             :filled="true"
-            class="transform rotate-180 text-gray-500"
+            class="text-gray-500 transform rotate-180"
           />
           <BalIcon
             name="triangle"
@@ -72,27 +72,27 @@
               width: `calc(100% - ${4 * (routes.length - index - 1)}px + 1px)`,
               margin: `0 ${2 * (routes.length - index - 1) - 1}px`
             }"
-            class="absolute border-l border-r border-b border-gray-500 rounded-b-md"
+            class="absolute border-b border-l border-r border-gray-500 rounded-b-md"
           />
           <div class="relative z-10">
             <div
               v-for="route in routes"
               :key="route.hops[0]?.pool?.address"
-              class="mt-9 first:mt-0 flex justify-between"
+              class="flex justify-between mt-9 first:mt-0"
             >
-              <div class="w-4 ml-4 flex items-center">
+              <div class="flex items-center w-4 ml-4">
                 <BalIcon
                   name="triangle"
                   size="xxs"
                   :filled="true"
-                  class="transform rotate-90 text-gray-500"
+                  class="text-gray-500 transform rotate-90"
                 />
               </div>
               <div class="flex">
                 <div
                   v-for="hop in route.hops"
                   :key="hop?.pool?.address"
-                  class="ml-4 first:ml-0 flex bg-white hover:bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 border border-gray-100 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-400 rounded-xl shadow transition-colors"
+                  class="flex ml-4 transition-colors bg-white border border-gray-100 shadow first:ml-0 hover:bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 hover:border-gray-300 dark:border-gray-600 dark:hover:border-gray-400 rounded-xl"
                 >
                   <a
                     class="flex p-1.5"
@@ -438,8 +438,8 @@ export default defineComponent({
         [Network.KOVAN]: 'kovan.',
         [Network.POLYGON]: 'polygon.',
         [Network.ARBITRUM]: 'arbitrum.',
-        [Network.GNOSIS]: 'gnosis.',
-        [Network.CELO]: 'celo.'
+        [Network.CELO]: 'celo.',
+        [Network.GNOSIS]: 'gnosis.'
       };
       const prefix = prefixMap[chainId] || '';
       if (props.sorReturn.isV1swap && chainId === 1) {

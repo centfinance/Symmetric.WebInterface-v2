@@ -1,10 +1,15 @@
 <template>
   <div class="lg:container lg:mx-auto pt-10 md:pt-12">
+    <div class="flex items-center justify-center mb-5">
+      <h5 class="mr-3">Total Liquidity:</h5>
+      <h4>${{ fNum(getTotalLiquidity) }}</h4>
+    </div>
+
     <template v-if="isWalletReady">
       <div class="px-4 lg:px-0">
         <BalStack horizontal justify="between" align="center">
           <h3>{{ $t('myV2Investments') }}</h3>
-          <BalBtn @click="navigateToCreatePool" color="blue" size="sm">{{
+          <BalBtn @click="navigateToCreatePool" color="symmetric" size="sm">{{
             $t('createAPool.title')
           }}</BalBtn>
         </BalStack>
@@ -26,6 +31,23 @@
       <div class="mb-16" />
     </template>
 
+    <div v-if="indexPools.length > 0">
+      <div class="px-4 lg:px-0">
+        <h3 class="mb-3">Index pools</h3>
+      </div>
+
+      <PoolsTable
+        :isLoading="isLoadingPools"
+        :data="indexPools"
+        :noPoolsLabel="$t('noPoolsFound')"
+        :isPaginated="false"
+        :isLoadingMore="false"
+        @loadMore="loadMorePools"
+        :selectedTokens="selectedTokens"
+        class="mb-8"
+      />
+    </div>
+
     <div class="px-4 lg:px-0">
       <h3 class="mb-3">{{ $t('investmentPools') }}</h3>
       <div
@@ -40,7 +62,7 @@
         />
         <BalBtn
           @click="navigateToCreatePool"
-          color="blue"
+          color="symmetric"
           size="sm"
           :class="{ 'mt-4': upToMediumBreakpoint }"
           :block="upToMediumBreakpoint"
@@ -89,6 +111,7 @@ import useWeb3 from '@/services/web3/useWeb3';
 import usePoolFilters from '@/composables/pools/usePoolFilters';
 import useAlerts, { AlertPriority, AlertType } from '@/composables/useAlerts';
 import useBreakpoints from '@/composables/useBreakpoints';
+import useNumbers from '@/composables/useNumbers';
 
 export default defineComponent({
   components: {
@@ -99,6 +122,7 @@ export default defineComponent({
 
   setup() {
     // COMPOSABLES
+    const { fNum } = useNumbers();
     const router = useRouter();
     const { t } = useI18n();
     const { isWalletReady, isV1Supported, appNetworkConfig } = useWeb3();
@@ -121,6 +145,8 @@ export default defineComponent({
     } = usePools(selectedTokens);
     const { addAlert, removeAlert } = useAlerts();
     const { upToMediumBreakpoint } = useBreakpoints();
+    const smumIndexPool =
+      '0xa287a3722c367849efa5c76e96be36efd65c290e000100000000000000000020';
 
     // COMPUTED
     const filteredPools = computed(() =>
@@ -130,8 +156,37 @@ export default defineComponent({
               pool.tokenAddresses.includes(selectedToken)
             );
           })
-        : pools?.value
+        : pools?.value?.filter(pool => pool.id !== smumIndexPool)
     );
+
+    const indexPools = computed(() => {
+      return selectedTokens.value.length > 0
+        ? pools.value?.filter(pool => {
+            if (pool.id !== smumIndexPool) return false;
+            return selectedTokens.value.every((selectedToken: string) =>
+              pool.tokenAddresses.includes(selectedToken)
+            );
+          })
+        : pools?.value?.filter(pool => pool.id === smumIndexPool);
+    });
+
+    const getTotalLiquidity = computed(() => {
+      const filtered =
+        selectedTokens.value.length > 0
+          ? pools.value?.filter(pool => {
+              return selectedTokens.value.every((selectedToken: string) =>
+                pool.tokenAddresses.includes(selectedToken)
+              );
+            })
+          : pools?.value;
+
+      const tvl = filtered.reduce(
+        (previous, current) => (previous += +current.totalLiquidity),
+        0
+      );
+
+      return tvl.toFixed(2);
+    });
 
     const hideV1Links = computed(() => !isV1Supported);
 
@@ -161,9 +216,11 @@ export default defineComponent({
     return {
       // data
       filteredPools,
+      indexPools,
       userPools,
       isLoadingPools,
       isLoadingUserPools,
+      getTotalLiquidity,
 
       // computed
       isWalletReady,
@@ -180,6 +237,7 @@ export default defineComponent({
       addSelectedToken,
       removeSelectedToken,
       navigateToCreatePool,
+      fNum,
 
       // constants
       EXTERNAL_LINKS

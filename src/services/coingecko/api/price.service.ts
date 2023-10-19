@@ -85,7 +85,6 @@ export class PriceService {
           addressesPerRequest * page,
           addressesPerRequest * (page + 1)
         );
-
         // TODO: Put a better fix in for this
         let networkIdentity = this.platformId;
         if (this.platformId == 'gnosis') {

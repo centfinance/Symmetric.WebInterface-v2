@@ -1,71 +1,70 @@
 {
-    "key": "100",
-    "chainId": 100,
-    "chainName": "Gnosis",
-    "name": "Gnosis Mainnet",
-    "shortName": "Gnosis",
-    "network": "gnosis",
-    "unknown": false,
-    "rpc": "https://damp-black-dawn.xdai.quiknode.pro/01e1836b90fe8480ab14353cef700b0aec6ca85e/",
-    "ws": "wss://damp-black-dawn.xdai.quiknode.pro/01e1836b90fe8480ab14353cef700b0aec6ca85e/",
-    "loggingRpc": "https://damp-black-dawn.xdai.quiknode.pro/01e1836b90fe8480ab14353cef700b0aec6ca85e/",
-    "explorer": "https://blockscout.com/xdai/mainnet/",
-    "explorerName": "Blockscout",
-    "subgraph": "https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-gnosis",
-    "poolsUrlV1": "",
-    "poolsUrlV2": "",
-    "subgraphs": {
-      "aave": ""
+  "key": "100",
+  "chainId": 100,
+  "chainName": "Gnosis",
+  "name": "Gnosis Mainnet",
+  "shortName": "Gnosis",
+  "network": "gnosis",
+  "unknown": false,
+  "rpc": "https://rpc.gnosischain.com",
+  "ws": "wss://rpc.gnosischain.com/wss",
+  "loggingRpc": "https://rpc.gnosischain.com/",
+  "explorer": "https://blockscout.com/xdai/mainnet/",
+  "explorerName": "Blockscout",
+  "subgraph": "https://api.thegraph.com/subgraphs/name/centfinance/symmetric-v2-gnosis",
+  "farmSubgraph": "https://api.thegraph.com/subgraphs/name/centfinance/gnosis-symchef-dev",
+  "poolsUrlV1": "",
+  "poolsUrlV2": "",
+  "subgraphs": {
+    "aave": ""
+  },
+  "supportsEIP1559": true,
+  "nativeAsset": {
+      "name": "Xdai",
+      "address": "",
+      "symbol": "XDAI",
+      "decimals": 18,
+      "deeplinkId": "xdai",
+      "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/xdai/assets/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d/logo.png",
+      "minTransactionBuffer": "0.05"
     },
-    "supportsEIP1559": true,
-    "nativeAsset": {
-        "name": "Xdai",
-        "address": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        "symbol": "XDAI",
-        "decimals": 18,
-        "deeplinkId": "xdai",
-        "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/celo/assets/0x471EcE3750Da237f93B8E339c536989b8978a438/logo.png",
-        "minTransactionBuffer": "0.05"
-      },
-    "addresses": {
-      "bFactory": "0x9B4214FD41cD24347A25122AC7bb6B479BED72Ac",
-      "bActions": "0x88602D7ef1a3026daF96729938d6184cDAbbED95",
-      "dsProxyRegistry": "0x46AD1cB076f43126B9a89FdC06f3C8FdF3EEe6e5",
-      "exchangeProxy": "0x48Cf5264bCfd23e411f4Eae7B950F7b95ba0079f",
-      "merkleRedeem": "0x2B128E7d9fcd83a73f7b977Bc08894B388aD84cd",
-      "merkleOrchard": "0x56f1F6e41A49C256aE2B37c3DC7f97E0CD7915c2",
-      "multicall": "0xFAa296891cA6CECAF2D86eF5F7590316d0A17dA0",
-      "authorizer": "0xC6b0020CB695fcB184d33Dc61Eb8d03b9C3E87Ee",
-      "vault": "0x0a0717A8A0641eA3C4eB82Aa9D82F07Ad887750b",
-      "weightedPoolFactory": "0x335826a0373d479e1de544d1c3E37EE3E065DbB9",
-      "investmentPoolFactory": "0x9bB01f19D9AC3a70e469863BA7Cb521a0B926e5a",
-      "stablePoolFactory": "0x577FFD3D35C801f814C6E7e1f9127868241F46DF",
-      "tokenFactory": "",
-      "weth": "0x1D4dBDA9131a0781D2131Eaea012d2013d2F2883",
-      "stETH": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-      "wstETH": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-      "lidoRelayer": "0x41B953164995c11C81DA73D212ED8Af25741b7Ac",
-      "balancerHelpers": "0x1D036B45Ff4e7c9C458AeB402fe5B166abD2193B",
-      "batchRelayer": "0x6e6dC4D80734c5AD5D6fBA585619017B58C9a372"
+  "addresses": {
+    "bFactory": "",
+    "bActions": "",
+    "dsProxyRegistry": "",
+    "exchangeProxy": "",
+    "merkleRedeem": "",
+    "merkleOrchard": "",
+    "multicall": "0xFAa296891cA6CECAF2D86eF5F7590316d0A17dA0",
+    "authorizer": "0xAb758532D05d2A2fc7b2853ebe54Ac17fE17Ea7f",
+    "vault": "0x24F87b37F4F249Da61D89c3FF776a55c321B2773",
+    "weightedPoolFactory": "0xb13A501fA658389e437E3047d56F2Bf945207a5A",
+    "stablePoolFactory": "0xF9e6BE5A015Da5dc29B42ff345bB7Dd1b6C60aC7",
+    "tokenFactory": "",
+    "weth": "",
+    "stETH": "",
+    "wstETH": "",
+    "lidoRelayer": "",
+    "balancerHelpers": "0xe007Ba1c5665567175B4d462f8dba14506e7f592",
+    "batchRelayer": "0xDCE2ea355530c098f5B9410b6B2663E0FFf246Bf"
+  },
+  "keys": {
+    "infura": "daaa68ec242643719749dd1caba2fc66",
+    "alchemy": "oGLgncMVHNWltnK0nTfiryxQ6gYemKQO"
+  },
+  "strategies": {
+    "0": {
+      "type": "0",
+      "name": "stablePool"
     },
-    "keys": {
-      "infura": "daaa68ec242643719749dd1caba2fc66",
-      "alchemy": "oGLgncMVHNWltnK0nTfiryxQ6gYemKQO"
+    "1": {
+      "type": "1",
+      "name": "weightedPool"
     },
-    "strategies": {
-      "0": {
-        "type": "0",
-        "name": "stablePool"
-      },
-      "1": {
-        "type": "1",
-        "name": "weightedPool"
-      },
-      "2": {
-        "type": "2",
-        "name": "weightedPool"
-      }
-    },
-    "supportsElementPools": true
-  }
-  
+    "2": {
+      "type": "2",
+      "name": "weightedPool"
+    }
+  },
+  "supportsElementPools": true
+}

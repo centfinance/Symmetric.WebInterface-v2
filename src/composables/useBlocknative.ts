@@ -12,8 +12,8 @@ const SUPPORTED_NETWORKS = [
   Network.ROPSTEN,
   Network.GÖRLI,
   Network.POLYGON,
-  Network.GNOSIS,
-  Network.CELO
+  Network.CELO,
+  Network.GNOSIS
 ];
 
 export default function useBlocknative() {

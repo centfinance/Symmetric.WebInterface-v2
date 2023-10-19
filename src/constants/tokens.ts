@@ -16,10 +16,6 @@ export const TOKENS = {
       WETH: '0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1',
       BAL: '0x41286Bb1D3E870f3F750eB7E1C25d7E48c8A1Ac7'
     },
-    '100': {
-      WETH: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
-      BAL: '0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84'
-    },
     '137': {
       WETH: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
       BAL: '0x9a71012b13ca4d3d0cdc72a177df3ef03b0e76a3'
@@ -31,6 +27,10 @@ export const TOKENS = {
     '42220': {
       WETH: '0x5d6b088DadD5DA64B7CDBE44340f0dD72364d7a1',
       BAL: '0x8427bD503dd3169cCC9aFF7326c15258Bc305478' // SYMM v2 on celo
+    },
+    '100': {
+      WETH: '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d',
+      BAL: '0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84' // SYMM on Gnosis
     }
   },
   Prices: {

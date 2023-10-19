@@ -77,7 +77,7 @@ export default function usePoolCreation() {
     wrappedNativeAsset,
     injectedTokens
   } = useTokens();
-  const { account, getProvider } = useWeb3();
+  const { account, getProvider, isCelo } = useWeb3();
   const { txListener } = useEthers();
   const { addTransaction } = useTransactions();
   const { t } = useI18n();
@@ -198,7 +198,6 @@ export default function usePoolCreation() {
     }
     return sum;
   });
-
   const poolTypeString = computed((): string => {
     switch (poolCreationState.type) {
       case PoolType.Weighted:
@@ -248,7 +247,8 @@ export default function usePoolCreation() {
 
   const poolOwner = computed(() => {
     if (poolCreationState.feeManagementType === 'governance') {
-      return POOLS.DelegateOwner;
+      // switch between chain Delegate owner
+      return isCelo.value ? POOLS.DelegateOwner : POOLS.gnosisDelegateOwner;
     } else {
       if (poolCreationState.feeController === 'self') {
         return account.value;
@@ -454,12 +454,15 @@ export default function usePoolCreation() {
     try {
       const tokenAddresses: string[] = poolCreationState.seedTokens.map(
         (token: PoolSeedToken) => {
-          if (
-            token.tokenAddress === wrappedNativeAsset.value.address &&
-            poolCreationState.useNativeAsset
-          ) {
-            return nativeAsset.address;
+          if (wrappedNativeAsset.value != undefined) {
+            if (
+              token.tokenAddress === wrappedNativeAsset.value.address &&
+              poolCreationState.useNativeAsset
+            ) {
+              return nativeAsset.address;
+            }
           }
+
           return token.tokenAddress;
         }
       );

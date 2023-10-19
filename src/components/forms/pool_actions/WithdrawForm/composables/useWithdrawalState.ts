@@ -43,7 +43,10 @@ export default function useWithdrawalState(pool: Ref<FullPool | undefined>) {
     if (!state.isProportional && state.tokenOut === nativeAsset.address)
       // replace WETH with ETH
       return poolTokens.map(address => {
-        if (address === wrappedNativeAsset.value.address) {
+        if (
+          wrappedNativeAsset.value != undefined &&
+          address === wrappedNativeAsset.value.address
+        ) {
           return nativeAsset.address;
         }
         return address;

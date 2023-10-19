@@ -1,9 +1,9 @@
 {
-    "name": "Cent",
+    "name": "Symmetric",
     "timestamp": "2021-01-20T00:00:00.000Z",
-    "logoURI": "https://raw.githubusercontent.com/centfinance/Community/main/media-pack/logo256w.png",
+    "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/ethereum/assets/0x57dB3FfCa78dBbE0eFa0EC745D55f62aa0Cbd345/logo.png",
     "keywords": [
-        "cent",
+        "symmetric",
         "listed"
     ],
     "version": {
@@ -12,13 +12,21 @@
         "patch": 0
     },
     "tokens": [
-        {
+       {
             "address": "0x3a97704a1b25F08aa230ae53B352e2e72ef52843",
             "chainId": 100,
             "name": "Agave Token",
             "symbol": "AGVE",
             "decimals": 18,
             "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/xdai/assets/0x3a97704a1b25f08aa230ae53b352e2e72ef52843/logo.png"
+        },
+        {
+            "address": "0x177127622c4A00F3d409B75571e12cB3c8973d3c",
+            "chainId": 100,
+            "name": "CoW Protocol Token from Mainnet",
+            "symbol": "COW",
+            "decimals": 18,
+            "logoURI": "https://assets.coingecko.com/coins/images/24384/small/COW-token-1024x1024.png"
         },
         {
             "address": "0x44fA8E6f47987339850636F88629646662444217",
@@ -29,12 +37,28 @@
             "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
         },
         {
+            "address": "0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb",
+            "chainId": 100,
+            "name": "DAOhaus Token from Ethereum",
+            "symbol": "HAUS",
+            "decimals": 18,
+            "logoURI": "https://assets.coingecko.com/coins/images/14551/small/jN3kkqke_400x400.png"
+        },
+        {
             "address": "0x2bF2ba13735160624a0fEaE98f6aC8F70885eA61",
             "chainId": 100,
             "name": "Own a fraction (FRACTION)",
             "symbol": "FRACTION",
             "decimals": 18,
             "logoURI": "https://fraction.fyi/i/FRACTION-TokenIcon.svg"
+        },
+        {
+            "address": "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+            "chainId": 100,
+            "name": "Gnosis Token on xDai",
+            "symbol": "GNO",
+            "decimals": 18,
+            "logoURI": "https://assets.coingecko.com/coins/images/662/small/logo_square_simple_300px.png?1609402668"
         },
         {
             "address": "0x71850b7E9Ee3f13Ab46d67167341E4bDc905Eef9",
@@ -59,6 +83,14 @@
             "symbol": "MIVA",
             "decimals": 18,
             "logoURI": "https://minerva.digital/i/MIVA-Token.svg"
+        },
+        {
+            "address": "0xA4eF9Da5BA71Cc0D2e5E877a910A37eC43420445",
+            "chainId": 100,
+            "name": "StakeWise Staked GNO (sGNO)",
+            "symbol": "sGNO",
+            "decimals": 18,
+            "logoURI": "https://app.stakewise.io/static/images/currencies/sgno.png"
         },
         {
             "address": "0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e",
@@ -285,6 +317,22 @@
             "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/ethereum/assets/0x57dB3FfCa78dBbE0eFa0EC745D55f62aa0Cbd345/logo.png"
         },
         {
+            "address": "0xA287A3722c367849eFA5c76e96BE36efd65C290e",
+            "chainId": 42220,
+            "name": "Celo Defi Index",
+            "symbol": "cDEFI",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/celo/assets/0xA287A3722c367849eFA5c76e96BE36efd65C290e/logo.png"
+        },
+        {
+            "address": "0x2C98Ebada737f6f75B410c0eaa66A19B110796b5",
+            "chainId": 42220,
+            "name": "Prime",
+            "symbol": "D2D",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/centfinance/assets/master/blockchains/celo/assets/0x2C98Ebada737f6f75B410c0eaa66A19B110796b5/logo.png"
+        },
+        {
             "address": "0x00Be915B9dCf56a3CBE739D9B9c202ca692409EC",
             "chainId": 42220,
             "name": "Ubeswap",
@@ -331,6 +379,14 @@
             "symbol": "WETHv2",
             "decimals": 18,
             "logoURI": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WETH.png"
+        },
+        {
+            "address": "0x9995cc8F20Db5896943Afc8eE0ba463259c931ed",
+            "chainId": 42220,
+            "name": "ETHIX",
+            "symbol": "ETHIX",
+            "decimals": 18,
+            "logoURI": "https://assets.coingecko.com/coins/images/3031/small/ETHIX_icon_256x256-256.png?1622195164"
         }
     ]
 }

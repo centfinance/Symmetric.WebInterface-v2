@@ -44,6 +44,22 @@ export const TOKEN_LIST_MAP: TokenListMapByNetwork = {
       // 'https://umaproject.org/uma.tokenlist.json'
     ]
   },
+  '100': {
+    Balancer: {
+      Default:
+        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/symmetric-v2/src/data/listed.tokenlist.json',
+      // 'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/develop/src/lib/config/listed.tokenlist.json',
+      Vetted:
+        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/symmetric-v2/src/data/listed.tokenlist.json'
+      // 'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/develop/src/lib/config/listed.tokenlist.json'
+    },
+    External: [
+      // 'ipns://tokens.uniswap.org'
+      // 'https://raw.githubusercontent.com/centfinance/Symmetric.ExchangeUI/develop/src/data/listed.tokenlist.json'
+      //'tokenlist.aave.eth',
+      // 'https://umaproject.org/uma.tokenlist.json'
+    ]
+  },
   '42': {
     Balancer: {
       Default:
@@ -55,22 +71,6 @@ export const TOKEN_LIST_MAP: TokenListMapByNetwork = {
       'ipns://tokens.uniswap.org',
       // 'https://tokens.coingecko.com/uniswap/all.json',
       'https://umaproject.org/uma.tokenlist.json'
-    ]
-  },
-  '100': {
-    Balancer: {
-      Default:
-        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/addGnosisSupport/src/data/listed.tokenlist.json',
-      // 'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/develop/src/lib/config/listed.tokenlist.json',
-      Vetted:
-        'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/addGnosisSupport/src/data/listed.tokenlist.json'
-      // 'https://raw.githubusercontent.com/centfinance/Symmetric.WebInterface-v2/develop/src/lib/config/listed.tokenlist.json'
-    },
-    External: [
-      'ipns://tokens.uniswap.org'
-      // 'https://raw.githubusercontent.com/centfinance/Symmetric.ExchangeUI/develop/src/data/listed.tokenlist.json'
-      //'tokenlist.aave.eth',
-      // 'https://umaproject.org/uma.tokenlist.json'
     ]
   },
   '137': {

@@ -1,9 +1,9 @@
 <template>
-  <div class="lg:container lg:mx-auto pt-8">
+  <div class="pt-8 lg:container lg:mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 gap-x-0 lg:gap-x-8">
       <div class="col-span-2">
         <BalLoadingBlock v-if="loadingPool" class="h-16" />
-        <div v-else class="px-4 lg:px-0 flex flex-col">
+        <div v-else class="flex flex-col px-4 lg:px-0">
           <div class="flex flex-wrap items-center -mt-2">
             <h3 class="pool-title">
               {{ poolTypeLabel }}
@@ -11,7 +11,7 @@
             <div
               v-for="([address, tokenMeta], i) in titleTokens"
               :key="i"
-              class="mt-2 mr-2 flex items-center px-2 h-10 bg-gray-50 dark:bg-gray-850 rounded-lg"
+              class="flex items-center h-10 px-2 mt-2 mr-2 rounded-lg bg-gray-50 dark:bg-gray-850"
             >
               <BalAsset :address="address" />
               <span class="ml-2">
@@ -19,7 +19,7 @@
               </span>
               <span
                 v-if="!isStableLikePool"
-                class="font-medium text-gray-400 text-xs mt-px ml-1"
+                class="mt-px ml-1 text-xs font-medium text-gray-400"
               >
                 {{ fNum(tokenMeta.weight, 'percent_lg') }}
               </span>
@@ -28,12 +28,12 @@
               v-if="pool.dynamic.isNewPool"
               color="red"
               size="sm"
-              class="uppercase mt-2 mr-2"
+              class="mt-2 mr-2 uppercase"
               :outline="false"
             >
               {{ $t('new') }}
             </BalChip>
-            <LiquidityAPRTooltip :pool="pool" class="-ml-1 mt-1" />
+            <LiquidityAPRTooltip :pool="pool" class="mt-1 -ml-1" />
           </div>
           <div class="flex items-center mt-2">
             <div v-html="poolFeeLabel" class="text-sm text-gray-600" />
@@ -50,7 +50,7 @@
                   v-else
                   name="info"
                   size="xs"
-                  class="text-gray-400 ml-2"
+                  class="ml-2 text-gray-400"
                 />
               </template>
               <span>
@@ -86,7 +86,7 @@
 
       <div class="hidden lg:block" />
 
-      <div class="col-span-2 order-2 lg:order-1">
+      <div class="order-2 col-span-2 lg:order-1">
         <div class="grid grid-cols-1 gap-y-8">
           <div class="px-1 lg:px-0">
             <PoolChart
@@ -94,21 +94,24 @@
               :historicalPrices="historicalPrices"
               :snapshots="snapshots"
               :loading="isLoadingSnapshots"
+              :totalLiquidity="pool?.totalLiquidity"
+              :tokensList="pool?.tokensList"
+              :poolType="pool?.poolType"
             />
           </div>
-          <div class="mb-4 px-1 lg:px-0">
+          <div class="px-1 mb-4 lg:px-0">
             <PoolStatCards :pool="pool" :loading="loadingPool" />
           </div>
 
           <div class="mb-4">
-            <h4 v-text="$t('poolComposition')" class="px-4 lg:px-0 mb-4" />
+            <h4 v-text="$t('poolComposition')" class="px-4 mb-4 lg:px-0" />
             <PoolBalancesCard :pool="pool" :loading="loadingPool" />
           </div>
 
           <div>
             <h4
               v-text="$t('poolTransactions.title')"
-              class="px-4 lg:px-0 mb-2"
+              class="px-4 mb-2 lg:px-0"
             />
             <PoolTransactionsCard :pool="pool" :loading="loadingPool" />
           </div>
@@ -117,11 +120,11 @@
 
       <div
         v-if="!isLiquidityBootstrappingPool"
-        class="order-1 lg:order-2 px-1 lg:px-0"
+        class="order-1 px-1 lg:order-2 lg:px-0"
       >
         <BalLoadingBlock
           v-if="loadingPool"
-          class="pool-actions-card h-60 mb-4"
+          class="mb-4 pool-actions-card h-60"
         />
         <MyPoolBalancesCard
           v-else-if="!noInitLiquidity"
@@ -130,14 +133,22 @@
           class="mb-4"
         />
 
-        <BalLoadingBlock v-if="loadingPool" class="pool-actions-card h-40" />
+        <BalLoadingBlock v-if="loadingPool" class="h-40 pool-actions-card" />
         <PoolActionsCard
           v-else-if="!noInitLiquidity"
           :pool="pool"
           :missingPrices="missingPrices"
+          class="mb-4"
+        />
+        <BalLoadingBlock v-if="loadingPool" class="h-40 pool-actions-card" />
+        <PoolFarmCard
+          v-if="!loadingPool && farmAvailable"
+          :pool="pool"
+          :farm="farm"
+          class="mb-4"
         />
       </div>
-      <!-- <div v-else class="order-1 lg:order-2 px-1 lg:px-0">
+      <!-- <div v-else class="order-1 px-1 lg:order-2 lg:px-0">
         <BalCard
           v-if="isCopperPool"
           noPad
@@ -150,7 +161,7 @@
             <div class="mb-4 text-sm">
               {{ $t('copperLaunchPromo.description') }}
             </div>
-            <div class="italic mb-4 text-sm">
+            <div class="mb-4 text-sm italic">
               {{ $t('copperLaunchPromo.poweredByBalancer') }}
             </div>
             <BalLink
@@ -185,6 +196,7 @@ import { useRoute } from 'vue-router';
 import useNumbers from '@/composables/useNumbers';
 import { usePool } from '@/composables/usePool';
 import usePoolQuery from '@/composables/queries/usePoolQuery';
+import useFarmsQuery from '@/composables/queries/useFarmsQuery';
 import usePoolSnapshotsQuery from '@/composables/queries/usePoolSnapshotsQuery';
 import { POOLS } from '@/constants/pools';
 import { EXTERNAL_LINKS } from '@/constants/links';
@@ -214,7 +226,7 @@ export default defineComponent({
     const { fNum } = useNumbers();
     const { isWalletReady } = useWeb3();
     const { prices } = useTokens();
-    const { blockNumber, isKovan, isMainnet, isPolygon } = useWeb3();
+    const { blockNumber, isKovan, isMainnet, isPolygon, isCelo } = useWeb3();
     const { addAlert, removeAlert } = useAlerts();
     const { balancerTokenListTokens } = useTokens();
 
@@ -222,6 +234,10 @@ export default defineComponent({
      * QUERIES
      */
     const poolQuery = usePoolQuery(route.params.id as string);
+    const farmQuery = useFarmsQuery(route.params.id.toString().substr(0, 42));
+    // const v2Prices = useSymmetricQueries(['0x8427bd503dd3169ccc9aff7326c15258bc305478']);
+    // console.log('V2 prices', v2Prices)
+
     const poolSnapshotsQuery = usePoolSnapshotsQuery(
       route.params.id as string,
       30
@@ -238,6 +254,7 @@ export default defineComponent({
      * COMPUTED
      */
     const pool = computed(() => poolQuery.data.value);
+    const farm = computed(() => farmQuery.data.value?.pages[0]);
     const {
       isStableLikePool,
       isLiquidityBootstrappingPool,
@@ -251,8 +268,11 @@ export default defineComponent({
         Number(pool.value.onchain.totalSupply) === 0
     );
 
+    const farmAvailable = computed(() => farm?.value?.pools.length);
     const communityManagedFees = computed(
-      () => pool.value?.owner == POOLS.DelegateOwner
+      () =>
+        pool.value?.owner ==
+        (isCelo.value ? POOLS.DelegateOwner : POOLS.gnosisDelegateOwner)
     );
     const feesManagedByGauntlet = computed(
       () =>
@@ -280,7 +300,6 @@ export default defineComponent({
     );
 
     const loadingPool = computed(() => poolQueryLoading.value || !pool.value);
-
     const snapshots = computed(() => poolSnapshotsQuery.data.value?.snapshots);
     const historicalPrices = computed(
       () => poolSnapshotsQuery.data.value?.prices
@@ -418,7 +437,9 @@ export default defineComponent({
       // computed
       appLoading,
       pool,
+      farm,
       noInitLiquidity,
+      farmAvailable,
       poolTypeLabel,
       poolFeeLabel,
       historicalPrices,

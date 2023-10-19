@@ -20,6 +20,13 @@
     >
       Swap
     </router-link>
+    <a
+      href="https://farms.symm.fi"
+      target="_blank"
+      :class="['toggle-link px-6 rounded-r-lg']"
+    >
+      Farms
+    </a>
   </div>
 </template>
 
