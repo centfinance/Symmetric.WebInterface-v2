@@ -7,8 +7,8 @@ const network = ((): Network => {
       return Network.MAINNET;
     case '42':
       return Network.KOVAN;
-    case '100':
-      return Network.GNOSIS;
+    // case '100':
+    //  return Network.GNOSIS;
     case '137':
       return Network.POLYGON;
     case '42161':

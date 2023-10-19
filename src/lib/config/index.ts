@@ -48,6 +48,7 @@ export interface Config {
     multicall: string;
     vault: string;
     weightedPoolFactory: string;
+    investmentPoolFactory: string;
     stablePoolFactory: string;
     weth: string;
     stETH: string;

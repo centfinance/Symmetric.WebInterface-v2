@@ -9,6 +9,8 @@ import { configService } from '@/services/config/config.service';
 import useUserSettings from '@/composables/useUserSettings';
 import { TOKENS } from '@/constants/tokens';
 import useNetwork from '../useNetwork';
+import { subgraphRequest } from '@/lib/utils/subgraph';
+import useSymmetricQueries from '@/composables/queries/useSymmetricQueries.json';
 
 /**
  * TYPES
@@ -30,6 +32,25 @@ export default function useTokenPricesQuery(
   const { networkId } = useNetwork();
   const queryKey = reactive(QUERY_KEYS.Tokens.Prices(networkId, addresses));
   const { currency } = useUserSettings();
+
+  // TODO: kill this with fire as soon as Coingecko supports symmv2
+  async function injectSymmV2PriceOnCelo(
+    prices: TokenPrices
+  ): Promise<TokenPrices> {
+    // get SYMM price from v1 subgraph
+    const symm2address = '0x8427bD503dd3169cCC9aFF7326c15258Bc305478';
+    const url =
+      'https://api.thegraph.com/subgraphs/name/centfinance/symmetricv1celo';
+    const subgraphRes = await subgraphRequest(
+      url,
+      useSymmetricQueries['getSYMM2PriceCELO']
+    );
+    const symmPrice = subgraphRes?.tokenPrices[0].price;
+    prices[symm2address] = {
+      [currency.value]: Number((+symmPrice).toFixed(6))
+    };
+    return prices;
+  }
 
   // TODO: kill this with fire as soon as Coingecko supports wstETH
   function injectWstEth(prices: TokenPrices): TokenPrices {
@@ -57,7 +78,7 @@ export default function useTokenPricesQuery(
         PER_PAGE * page,
         PER_PAGE * (page + 1)
       );
-
+      console.log('Fetching', pageAddresses.length, 'prices');
       prices = {
         ...prices,
         ...(await coingeckoService.prices.getTokens(pageAddresses))
@@ -65,6 +86,7 @@ export default function useTokenPricesQuery(
     }
 
     prices = injectWstEth(prices);
+    prices = await injectSymmV2PriceOnCelo(prices);
     return prices;
   };
 

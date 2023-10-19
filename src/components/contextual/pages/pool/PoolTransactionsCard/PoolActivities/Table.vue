@@ -159,7 +159,6 @@ function getJoinExitDetails(amounts: PoolActivity['amounts']) {
     const token = tokens.value[address];
     const symbol = token ? token.symbol : address;
     const amountNumber = parseFloat(amount);
-
     return {
       address,
       symbol,

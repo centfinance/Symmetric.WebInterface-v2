@@ -3,8 +3,8 @@ export const EXTERNAL_LINKS = {
     Home: 'https://symmetric.finance',
     BalForGas:
       'https://docs.balancer.finance/core-concepts/bal-balancer-governance-token/bal-for-gas',
-    PoolsV1Dashboard: 'https://dev-symmv2-gnosis.symmetric.exchange/#/',
-    PoolsV1Explore: 'https://dev-symmv2-gnosis.symmetric.exchange/#/trade'
+    PoolsV1Dashboard: 'https://celo-pools.symmetric.exchange/#/',
+    PoolsV1Explore: 'https://celo-pools.symmetric.exchange/#/explore'
   },
   Gauntlet: {
     Home: 'https://gauntlet.network'

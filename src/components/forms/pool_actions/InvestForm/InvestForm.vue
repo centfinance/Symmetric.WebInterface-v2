@@ -128,7 +128,6 @@ function tokenWeight(address: string): number {
   if (address === nativeAsset.address) {
     return props.pool.onchain.tokens[wrappedNativeAsset.value.address].weight;
   }
-
   return props.pool.onchain.tokens[address].weight;
 }
 

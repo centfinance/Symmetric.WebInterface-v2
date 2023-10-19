@@ -38,6 +38,7 @@
       "authorizer": "0xC6b0020CB695fcB184d33Dc61Eb8d03b9C3E87Ee",
       "vault": "0x0a0717A8A0641eA3C4eB82Aa9D82F07Ad887750b",
       "weightedPoolFactory": "0x335826a0373d479e1de544d1c3E37EE3E065DbB9",
+      "investmentPoolFactory": "0x9bB01f19D9AC3a70e469863BA7Cb521a0B926e5a",
       "stablePoolFactory": "0x577FFD3D35C801f814C6E7e1f9127868241F46DF",
       "tokenFactory": "",
       "weth": "0x1D4dBDA9131a0781D2131Eaea012d2013d2F2883",
