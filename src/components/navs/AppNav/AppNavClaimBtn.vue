@@ -65,7 +65,6 @@ const {
   isKovan,
   isPolygon,
   isCelo,
-  isGnosis,
   isMismatchedNetwork
 } = useWeb3();
 const { txListener } = useEthers();
